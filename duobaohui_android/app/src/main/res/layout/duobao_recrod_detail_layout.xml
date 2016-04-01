@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_fef9f4"
+    android:padding="@dimen/s_12dp">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/duobao_record_detail_layout_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/s_5dp"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:maxLines="1"
+        android:singleLine="false"
+        android:text="2015-09-20 19:09:27:518" />
+
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/duobao_record_detail_layout_personNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/s_5dp"
+        android:layout_toLeftOf="@+id/duobao_record_detail_layout_personNumberTVC"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/c_ff5a5a" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/duobao_record_detail_layout_personNumberTVC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/s_5dp"
+        android:text="人次" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/duobao_record_detail_layout_tvBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/duobao_record_detail_layout_personNumber"
+        android:layout_marginTop="@dimen/s_5dp"
+        android:text="查看号码"
+        android:textColor="@color/c_00b7ee" />
+</RelativeLayout>

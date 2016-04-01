@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/s_15dp">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/win_recrod_item_layout_statue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/s_10dp"
+        android:paddingLeft="@dimen/s_15dp"
+        android:paddingTop="@dimen/s_10dp"
+        android:text="待领奖"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_1dp"
+        android:background="@color/c_efefef" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/s_10dp">
+
+        <ImageView
+            android:id="@+id/win_recrod_item_layout_img"
+            android:layout_width="@dimen/s_90dp"
+            android:layout_height="@dimen/s_90dp"
+            android:layout_marginLeft="@dimen/s_15dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:src="@drawable/icon_nopic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/win_recrod_item_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_50dp"
+                android:maxLines="2"
+                android:text="Iphone 6s 玫瑰金 128G玫瑰金玫瑰金玫瑰金玫瑰金玫瑰金玫瑰金玫瑰金"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_15sp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/win_recrod_item_layout_total_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="共需人次： 11800"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_14sp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/win_recrod_item_layout_period_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本期参与： 55555"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_14sp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/win_recrod_item_layout_luncky_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="幸运号码： 10023938"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_14sp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/win_recrod_item_layout_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="揭晓时间： 2015-11-10 21:21:56"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

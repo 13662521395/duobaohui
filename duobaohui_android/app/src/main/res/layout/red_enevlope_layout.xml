@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <View
+        android:id="@+id/v_bttomdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_250dp" />
+
+    <RelativeLayout
+        android:id="@+id/relative_red_enevlope_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_bttomdp"
+        android:background="@color/c_efefef">
+
+        <RelativeLayout
+            android:id="@+id/re_eneclope_layout_titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_45dp"
+            android:background="@color/c_ffffff">
+
+            <TextView
+                android:id="@+id/re_eneclope_layout_noUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/s_10dp"
+                android:text="@string/no_user_red_enevlope"
+                android:textColor="@color/c_ff5a5a"
+                android:textSize="@dimen/s_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/s_10dp"
+                android:text="@string/choose_red_eneclope"
+                android:textColor="@color/c_333"
+                android:textSize="@dimen/s_18sp" />
+
+            <TextView
+                android:id="@+id/re_eneclope_layout_confrim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/s_10dp"
+                android:text="@string/app_ok"
+                android:textColor="@color/c_ff5a5a"
+                android:textSize="@dimen/s_14sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line_tf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_1dp"
+            android:layout_below="@+id/re_eneclope_layout_titleLayout"
+            android:background="@color/c_efefef" />
+
+        <ListView
+            android:id="@+id/re_eneclope_layout_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v_line_tf"
+            android:background="@color/c_ffffff"
+            android:clipToPadding="false"
+            android:divider="@color/c_efefef"
+            android:dividerHeight="@dimen/s_0.5dp"
+            android:scrollbarSize="@dimen/s_0.5dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@android:color/transparent"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/red_enevlope_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v_line_tf"
+            android:gravity="center"
+            android:text="当前商品没有可用的红包"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_16sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/s_180dp"
+    android:layout_height="@dimen/s_208dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_110dp"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_marginRight="@dimen/s_10dp"
+        android:layout_marginTop="@dimen/s_10dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_88dp"
+        android:layout_below="@id/product_img">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/product_name"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_15dp"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_20dp"
+            android:layout_marginTop="@dimen/s_5dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="Apple iPhone6 4.7英寸64G 土豪金"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_12dp" />
+
+        <RelativeLayout
+            android:id="@+id/time_count_down_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_58dp"
+            android:layout_below="@id/product_name"
+            android:layout_marginBottom="@dimen/s_2dp"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:layout_marginTop="@dimen/s_8dp"
+            android:gravity="left">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/goto_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_time_1"
+                android:drawablePadding="@dimen/s_5dp"
+                android:gravity="center"
+                android:text="即将揭晓"
+                android:textColor="@color/c_ff5a5a"
+                android:textSize="@dimen/s_12dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/goto_current"
+                android:gravity="left">
+
+                <com.shinc.duobaohui.customview.counttime.CountdownView
+                    android:id="@+id/count_down_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    app:isShowDay="false"
+                    app:isShowHour="false"
+                    app:isShowMillisecond="true"
+                    app:isShowMinute="true"
+                    app:isShowSecond="true"
+                    app:suffixGravity="center"
+                    app:suffixTextColor="@color/c_ff5a5a"
+                    app:suffixTextSize="@dimen/s_20dp"
+                    app:timeTextColor="@color/c_ff5a5a"
+                    app:timeTextSize="@dimen/s_24dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/end_time_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_58dp"
+            android:layout_below="@id/product_name"
+            android:layout_marginBottom="@dimen/s_2dp"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:layout_marginTop="@dimen/s_8dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="@dimen/s_140dp"
+                android:layout_height="@dimen/s_35dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/back_jiexiao" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/icon_time_2"
+                    android:drawablePadding="@dimen/s_5dp"
+                    android:gravity="center"
+                    android:text="揭晓中，请稍候"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/s_12dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

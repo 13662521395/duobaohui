@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:paddingBottom="@dimen/s_15dp"
+    android:paddingRight="@dimen/s_10dp"
+    android:paddingTop="@dimen/s_15dp">
+
+    <ImageView
+        android:id="@+id/user_main_page_duobao_frag_itemb_layout_img"
+        android:layout_width="@dimen/s_90dp"
+        android:layout_height="@dimen/s_90dp"
+        android:layout_marginLeft="@dimen/s_15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/s_12dp"
+        android:orientation="vertical">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/user_main_page_duobao_frag_itemb_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/s_5dp"
+            android:text="Apple"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_15sp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/user_main_page_duobao_frag_itemb_layout_layoutTotalNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共需:10.000"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_12sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_3dp">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/user_main_page_duobao_frag_itemb_layout_lienerLaoutSearchInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:text="查看夺宝号"
+                android:textColor="@color/c_00b7ee"
+                android:textSize="@dimen/s_14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/user_main_page_duobao_frag_itemb_layout_lienerLaoutSearchInfo"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="本期参与："
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_14sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/user_main_page_duobao_frag_itemb_layout_lienerLaoutFrequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/c_ff5a5a"
+                    android:textSize="@dimen/s_14sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/user_main_page_duobao_frag_itemb_layout_winningInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_10dp"
+            android:background="@color/c_efefef"
+            android:orientation="vertical"
+            android:padding="@dimen/s_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获得者:"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_13sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/user_main_page_duobao_frag_itemb_layout_winner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_20dp"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_3dp">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="本期参与:"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_13sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/user_main_page_duobao_frag_itemb_layout_periodInM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:textColor="@color/c_ff5a5a"
+                    android:textSize="@dimen/s_13sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_5dp"
+                    android:text="人次"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_3dp">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="幸运号码:"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_13sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/user_main_page_duobao_frag_itemb_layout_lunckyNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:textColor="@color/c_ff5a5a"
+                    android:textSize="@dimen/s_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_3dp">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="揭晓时间:"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_13sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/user_main_page_duobao_frag_itemb_layout_outLunckyNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

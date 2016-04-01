@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="title_bk_color">
+        <item name="android:background">?attr/title_bk_color</item>
+    </style>
+
+    <style name="title_font_bk_color">
+        <item name="android:textColor">?attr/title_font_bk_color</item>
+    </style>
+
+    <style name="title_black_buttton">
+        <item name="android:src">?attr/title_black_buttton</item>
+    </style>
+
+    <style name="money_font_color">
+        <item name="android:textColor">?attr/money_font_color</item>
+    </style>
+
+    <style name="money_font_price_color">
+        <item name="android:textColor">?attr/money_font_price_color</item>
+    </style>
+
+    <style name="item_img_bk">
+        <item name="android:src">?attr/item_img_bk</item>
+    </style>
+
+    <style name="item_font_color">
+        <item name="android:textColor">?attr/item_font_color</item>
+    </style>
+
+    <style name="duobao_bg_selector">
+        <item name="android:background">?attr/duobao_bg</item>
+        <item name="android:textColor">?attr/duobao_text_color</item>
+    </style>
+
+    <style name="report_reason_bg_selector">
+        <item name="android:background">?attr/report_reason_bg </item>
+        <item name="android:textColor">?attr/report_reason_text_color</item>
+    </style>
+
+    <style name="white_btn_style">
+        <item name="android:background">?attr/white_btn_bg</item>
+        <item name="android:textColor">?attr/white_text_color</item>
+    </style>
+
+    <style name="red_btn_style">
+        <item name="android:background">?attr/red_btn_bg</item>
+        <item name="android:textColor">?attr/red_text_color</item>
+    </style>
+
+    <style name="blue_btn_style">
+        <item name="android:background">?attr/blue_btn_bg</item>
+        <item name="android:textColor">?attr/blue_text_color</item>
+    </style>
+    <style name="dividing_line_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/dividing_0.5</item>
+        <item name="android:background">@color/gray_dividing</item>
+    </style>
+</resources>

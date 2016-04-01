@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_bk"
+
+    >
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_40dp"
+        android:background="@color/c_ff5a5a"
+        android:gravity="center"
+        android:text="恭喜您领奖成功"
+        android:textColor="@color/c_ffffff"
+        android:textSize="@dimen/s_14sp" />
+
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/dialog_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_40dp"
+        android:layout_below="@+id/dialog_title"
+        android:gravity="center"
+        android:text="中奖了，要不要稍微得瑟一下"
+        android:textSize="@dimen/s_14sp" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/dialog_shaidan_layout_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/s_30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dialog_info"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/s_10dp"
+        android:gravity="right|center"
+        android:text="去得瑟下"
+        android:textColor="@color/c_ff5a5a"
+        android:textSize="@dimen/s_15sp" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/dialog_shaidan_layout_no"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/s_30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dialog_shaidan_layout_yes"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/s_10dp"
+        android:gravity="right|center"
+        android:text="低调一点"
+        android:textColor="@color/c_ff5a5a"
+        android:textSize="@dimen/s_15sp" />
+</RelativeLayout>

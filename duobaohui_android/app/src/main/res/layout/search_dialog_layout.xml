@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_dialog_layout_bg">
+
+    <ImageView
+        android:id="@+id/dialog_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/s_15dp"
+        android:src="@drawable/ic_launcher" />
+
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/dialog_tvWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:text="网络链接失败，请检查您的网络链接"
+        android:textColor="@color/c_afafaf"
+        android:textSize="@dimen/s_14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_30dp"
+        android:layout_below="@+id/dialog_tvWord"
+        android:layout_marginTop="@dimen/s_25dp">
+
+        <Button
+            android:id="@+id/dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/s_30dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/dialog_btn_ok_bg"
+            android:text="确定"
+            android:textColor="@color/c_ffffff"
+            android:textSize="@dimen/s_14sp" />
+
+        <View
+            android:layout_width="@dimen/s_1dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/dialog_cancel"
+
+            android:layout_width="0dp"
+            android:layout_height="@dimen/s_30dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/dialog_btn_cancel_bg"
+            android:text="取消"
+            android:textColor="@color/c_ffffff"
+            android:textSize="@dimen/s_14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

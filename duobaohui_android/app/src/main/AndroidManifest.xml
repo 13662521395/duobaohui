@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shinc.duobaohui">
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!--  -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- renren sso Permission for Unit Test -->
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- ShareSDK所需权限 -->
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_my_about_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".paylibrary.PayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UpdateAddressActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DuoBaoRecrodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddressListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AbortActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DuoBaoRecrodDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ComputionalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserDuoBaoCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModifyPictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PerosnalChangePhoneNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PerosnalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PreAnnounceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecieveAddressActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CalculateDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".UserProtocolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DuoBaoCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RechargeRecrodActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PerosnalChangeNicknameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity android:name=".ProductDetailActivity"/>-->
+        <activity
+            android:name=".RechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShareShowOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PayResultActivity"
+            android:screenOrientation="portrait" />
+        <!--网页活动Activity-->
+        <activity
+            android:name=".WebActiveActivity"
+            android:screenOrientation="portrait" />
+        <!--夺宝纪录-->
+        <activity
+            android:name=".DuoBaoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 意见反馈-->
+        <activity
+            android:name=".FaceBookActivity"
+            android:screenOrientation="portrait" />
+        <!--支付订单-->
+        <activity
+            android:name=".PayFastionOrderActivity"
+            android:screenOrientation="portrait" />
+        <!--充值结果-->
+        <activity
+            android:name=".RechagerReturnActivity"
+            android:screenOrientation="portrait" />
+        <!--快速登陆-->
+        <activity
+            android:name=".FastLoginActivity"
+            android:screenOrientation="portrait" />
+        <!--TA的主页-->
+        <activity
+            android:name=".UserMainPageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--中奖记录-->
+        <activity
+            android:name=".WinRecrodActivity"
+            android:screenOrientation="portrait" />
+        <!--中奖详情-->
+        <activity
+            android:name=".WinDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--分类内容列表页-->
+        <activity
+            android:name=".CategoryContentActivity"
+            android:screenOrientation="portrait" />
+        <!--搜索页面-->
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <!--通知-->
+        <activity
+            android:name=".NoticeActivity"
+            android:screenOrientation="portrait" />
+        <!--通知详情-->
+        <activity
+            android:name=".NoticeDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--常见问题-->
+        <activity
+            android:name=".CommonProblemActivity"
+            android:screenOrientation="portrait" />
+        <!--红包DIALOG-->
+        <activity
+            android:name=".RedEnevlopeDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- alipay -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".paylibrary.pay.weixin.WxPayActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wx72146d9976a01133" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <receiver android:name="com.shinc.duobaohui.paylibrary.pay.weixin.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 世和 数据分析-->
+
+        <meta-data
+            android:name="SHINC_APPKEY"
+            android:value="be631299c0fd9f16cf4e789d72630caa" />
+        <meta-data
+            android:name="CHANNEL"
+            android:value="SHINC" />
+        <meta-data
+            android:name="MASTER_KEY"
+            android:value="e43f1ae5a434fb811c262c696cab9e21" />
+
+        <!-- umeng配置-->
+
+        <!--友盟基本渠道信息-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="560949fbe0f55a9111003080" />
+        <!-- 在打不同的渠道包的时候更改这个内容 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!-- 推送专用 -->
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="4915f1f6ebf45207593830a63ee50e0d" />
+
+        <!--自动升级-->
+        <activity android:name="com.umeng.update.UpdateDialogActivity" />
+
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!--分享编辑页-->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID-->
+                <data android:scheme="tencent1104899820" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity android:name=".ShowOrderActivity" />
+        <activity android:name=".utils.icon.ui.LocalAlbum" />
+        <activity android:name=".utils.icon.ui.LocalAlbumDetail" />
+        <activity android:name=".MyCouponsActivity" />
+        <activity android:name=".CouponsDetailsActivity" />
+
+        <!--&lt;!&ndash; 下载服务 &ndash;&gt;-->
+        <!--<service-->
+        <!--android:name=".server.DownService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="true" >-->
+        <!--</service>-->
+
+        <!-- ——————————————————————zxcvz＋————————————————————————————————————————- -->
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" />
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- com.shihe.productdetailstestapp字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.shinc.duobaohui.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- com.shihe.productdetailstestapp字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="com.shinc.duobaohui.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.shinc.duobaohui.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+
+        <!-- If you donot want to use the standard notification bar in SDK, you can define IntentService instead to handle message.
+                如果你不想在SDK的使用标准的通知栏，你可以定义intentservice来处理消息
+                -->
+        <!--<service-->
+        <!--android:name=".service.MyPushIntentService"-->
+        <!--android:process=":push" />-->
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <!--<meta-data-->
+            <!--android:name="com.google.android.gms.version"-->
+            <!--android:value="@integer/google_play_services_version" />-->
+
+    </application>
+
+</manifest>

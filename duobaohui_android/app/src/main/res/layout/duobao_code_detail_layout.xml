@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/duobao_code_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/s_10dp"
+        android:textSize="@dimen/s_15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/s_10dp">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/s_10dp"
+            android:text="参与了"
+            android:textSize="@dimen/s_14sp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/duobao_code_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c_ff5a5a"
+            android:textSize="@dimen/s_14sp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/s_2dp"
+            android:text="人次,以下是所有夺宝号码:"
+            android:textSize="@dimen/s_14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_0.5dp"
+        android:background="@color/c_efefef" />
+</LinearLayout>

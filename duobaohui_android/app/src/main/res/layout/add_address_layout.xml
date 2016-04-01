@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_48dp"
+            android:background="@color/c_ffffff">
+
+            <ImageView
+                android:id="@+id/add_address_layout_img_back"
+                android:layout_width="@dimen/s_40dp"
+                android:layout_height="fill_parent"
+                android:padding="@dimen/s_15dp"
+                android:src="@drawable/icon_back" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="添加地址"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_18dp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/add_address_layout_tv_addAddress"
+                android:layout_width="@dimen/s_45dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/s_8dp"
+                android:paddingRight="@dimen/s_8dp"
+                android:text="保存"
+                android:textColor="@color/c_00b7ee"
+                android:textSize="@dimen/s_14dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/c_e4e4e4" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff"
+                android:weightSum="1">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.2"
+                    android:text="收货人"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <EditText
+                    android:id="@+id/add_address_layout_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.85"
+                    android:background="@null"
+                    android:hint="汉字,数字,字母,_,10个字符以内"
+                    android:maxLength="15"
+                    android:padding="@dimen/s_10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/c_666666"
+                    android:textColorHint="@color/c_afafaf"
+                    android:textSize="@dimen/s_16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:background="@color/c_e4e4e4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff"
+                android:weightSum="1">
+
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.2"
+                    android:text="手机号码"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <EditText
+                    android:id="@+id/add_address_layout_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:ems="11"
+                    android:hint="手机号码"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:padding="@dimen/s_10dp"
+                    android:textColor="@color/c_666666"
+                    android:textColorHint="@color/c_afafaf"
+                    android:textSize="@dimen/s_16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:background="@color/c_e4e4e4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.2"
+                    android:text="地区      "
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <EditText
+                    android:id="@+id/add_address_layout_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:editable="false"
+                    android:hint="请选择"
+                    android:padding="@dimen/s_10dp"
+                    android:textColor="@color/c_666666"
+                    android:textColorHint="@color/c_afafaf"
+                    android:textSize="@dimen/s_16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:background="@color/c_e4e4e4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.2"
+                    android:text="详细地区"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <EditText
+                    android:id="@+id/add_address_layout_addressDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_10dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:layout_weight="0.8"
+                    android:background="@null"
+                    android:hint="汉字,数字,字母,_,26个字符以内"
+                    android:maxLength="26"
+                    android:padding="@dimen/s_10dp"
+                    android:textColor="@color/c_666666"
+                    android:textColorHint="@color/c_afafaf"
+                    android:textSize="@dimen/s_16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.shinc.duobaohui.utils.cascade.com.mrwujay.cascade.view.CascadeViewLayout
+        android:id="@+id/add_address_Cascade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

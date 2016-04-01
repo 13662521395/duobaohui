@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_45dp"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/duobao_detail_layout_lunckTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="2"
+            android:maxWidth="@dimen/s_10dp"
+            android:singleLine="false"
+            android:text="2015-09-18 12:30:48:128"
+            android:textSize="@dimen/s_14sp" />
+
+
+        <TextView
+            android:id="@+id/duobao_detail_layout_lunckNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@color/c_ff5a5a"
+
+            android:textSize="@dimen/s_14sp" />
+
+        <TextView
+            android:id="@+id/duobao_detail_layout_lunckCode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1000121"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/s_14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

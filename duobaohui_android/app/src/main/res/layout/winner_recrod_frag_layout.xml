@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef">
+
+    <RelativeLayout
+        android:id="@+id/winner_recrod_frag_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@color/c_ffffff">
+
+        <ImageView
+            android:id="@+id/winner_recrod_frag_layout_img_back"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="中奖记录"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/winner_recrod_frag_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/winner_recrod_frag_layout_frag_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_0.5dp"
+            android:background="@color/c_ffffff"
+            android:paddingTop="@dimen/s_10dp"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/winner_recrod_frag_layout_allLayout"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_allTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_allTvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:gravity="center"
+
+                    android:textSize="@dimen/s_14sp" />
+
+                <View
+                    android:id="@+id/winner_v0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    android:background="@color/c_ff5a5a"
+                    android:gravity="bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/winner_recrod_frag_layout_linearLayoutToBeConfrimeed"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_toBeConFfrimeedTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="待确认"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_toBeConFfrimeedTvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:gravity="center"
+
+                    android:textSize="@dimen/s_14sp" />
+
+                <View
+                    android:id="@+id/winner_v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    android:background="@color/c_ff5a5a"
+                    android:gravity="bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/winner_recrod_frag_layout_linearLayoutStayConsignee"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_stayConsigneeTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="待收货"
+                    android:textColor="@color/c_666666"
+
+                    android:textSize="@dimen/s_16sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_stayConsigneeTvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:gravity="center"
+
+                    android:textSize="@dimen/s_14sp" />
+
+                <View
+                    android:id="@+id/winner_v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    android:background="@color/c_ff5a5a"
+                    android:gravity="bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/winner_recrod_frag_layout_noDaringLayout"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_notDryingTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="未晒单"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_notDryingTvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/s_14sp" />
+
+                <View
+                    android:id="@+id/winner_v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_2dp"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    android:background="@color/c_ff5a5a"
+                    android:gravity="bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/winner_recrod_frag_layout_linearLayoutOffTheStocks"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_offTheStocksTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="已完成"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/winner_recrod_frag_layout_offTheStocksTvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:gravity="center"
+
+                    android:textSize="@dimen/s_14sp" />
+
+                <View
+                    android:id="@+id/winner_v4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    android:background="@color/c_ff5a5a"
+                    android:gravity="bottom" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/winner_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

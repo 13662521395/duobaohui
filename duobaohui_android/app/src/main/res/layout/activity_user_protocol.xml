@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/user_protocol_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/user_protocol_back_img"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/user_protocol_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/user_protocol_title"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/user_protocol_web_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarSize="@dimen/s_4dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbarTrackVertical="@android:color/transparent" />
+
+</LinearLayout>

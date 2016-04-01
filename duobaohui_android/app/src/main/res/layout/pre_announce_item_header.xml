@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/title"
+    android:layout_marginTop="@dimen/s_0.5dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/goto_current_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_40dp"
+        android:background="@drawable/layout_grey_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/active_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="第120期"
+            android:textColor="@color/c_666666" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="请稍候，正在揭晓..."
+            android:textColor="@color/c_ff5a5a" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/s_10dp"
+        android:src="@drawable/icon_more" />
+
+</RelativeLayout>

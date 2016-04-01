@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:focusable="false"
+            android:padding="@dimen/s_15dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="支付结果"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pay_success_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_200dp"
+        android:layout_below="@id/title"
+        android:background="@color/c_f7f7f7">
+
+        <ImageView
+            android:id="@+id/icon_pay_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/s_30dp"
+            android:src="@drawable/icon_payok" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/pay_ok_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_pay_ok"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/s_20dp"
+            android:singleLine="true"
+            android:text="恭喜你，参与成功！"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_16dp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/pay_ok_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pay_ok_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/s_2dp"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/s_30dp"
+            android:paddingRight="@dimen/s_30dp"
+            android:text="请等待系统为您揭晓！"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_16dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pay_user_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pay_success_layout"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/c_e4e4e4" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/user_info_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/s_10dp"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginTop="@dimen/s_10dp"
+            android:text="您成功参与了1件商品共1人次夺宝，信息如下："
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_14dp" />
+
+        <View
+            android:id="@+id/cut_line"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_below="@+id/user_info_title"
+            android:background="@color/c_e4e4e4" />
+
+        <LinearLayout
+            android:id="@+id/take_part_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cut_line"
+            android:orientation="horizontal">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/take_part_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/s_10dp"
+                android:layout_marginLeft="@dimen/s_10dp"
+                android:layout_marginTop="@dimen/s_10dp"
+                android:layout_weight="0.8"
+                android:singleLine="true"
+                android:text="(第1期)iPhone6 4.7英寸 64G"
+                android:textColor="@color/c_64caff"
+                android:textSize="@dimen/s_14dp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/take_part_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/s_10dp"
+                android:layout_marginLeft="@dimen/s_10dp"
+                android:layout_marginRight="@dimen/s_10dp"
+                android:layout_marginTop="@dimen/s_10dp"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:text="1人次"
+                android:textColor="@color/c_64caff"
+                android:textSize="@dimen/s_14dp" />
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/user_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/take_part_info_layout"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_below="@id/user_get_code"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_55dp"
+        android:layout_below="@id/pay_user_info"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/c_e4e4e4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/s_0.5dp"
+            android:layout_marginLeft="@dimen/s_15dp"
+            android:layout_marginRight="@dimen/s_15dp"
+            android:layout_marginTop="@dimen/s_0.5dp"
+            android:gravity="center">
+
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/continue_duobao"
+                style="@style/red_btn_style"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_35dp"
+                android:layout_marginRight="@dimen/s_40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="继续夺宝" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/goto_duobao_record"
+                style="@style/red_btn_style"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_35dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="查看夺宝记录" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+    <com.shinc.duobaohui.customview.imp.WaitLoading
+        android:id="@+id/wait_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="@color/fff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/no_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/s_150dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_noweb" />
+    </RelativeLayout>
+
+</RelativeLayout>

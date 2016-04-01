@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@color/c_ffffff"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/rechager_return_layout_imgBack"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="充值结果"
+            android:textSize="@dimen/s_18dp" />
+    </RelativeLayout>
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/rechager_return_layout_wineReturnWord"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_70dp"
+        android:layout_marginTop="@dimen/s_1dp"
+        android:background="@color/c_ffffff"
+        android:gravity="center"
+        android:text="恭喜您，获得1个夺宝币"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_40dp"
+        android:layout_marginTop="@dimen/s_1dp"
+        android:background="@color/white"
+        android:weightSum="2">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/rechader_return_layout_returnHomePage"
+            style="@style/red_btn_style"
+            android:layout_width="@dimen/s_0.5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/s_5dp"
+            android:text="返回首页" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/rechader_return_layout_returnRechagerRecrod"
+            android:layout_width="@dimen/s_0.5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gr_btn_bk"
+            android:gravity="center"
+            android:padding="@dimen/s_5dp"
+            android:text="查看充值记录" />
+    </LinearLayout>
+
+</LinearLayout>

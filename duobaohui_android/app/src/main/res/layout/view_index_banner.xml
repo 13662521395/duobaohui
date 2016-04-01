@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_banner"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/s_180dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.shinc.duobaohui.customview.imp.InfiniteLoopViewPager
+        android:id="@+id/vp_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_20dp">
+
+            <LinearLayout
+                android:id="@+id/ll_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/s_5dp"
+                android:orientation="horizontal"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

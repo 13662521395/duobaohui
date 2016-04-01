@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cube_ptr="http://schemas.android.com/tools"
+    android:id="@+id/detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/product_detail_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@color/c_ff5a5a">
+
+        <ImageView
+            android:id="@+id/detail_back_img"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back_white" />
+
+        <ImageView
+            android:id="@+id/login_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_appwords" />
+    </RelativeLayout>
+
+
+    <com.shinc.duobaohui.customview.ptr.PtrClassicFrameLayout
+        android:id="@+id/ptr_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/product_detail_title"
+        android:layout_marginBottom="@dimen/s_60dp"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <com.shinc.duobaohui.customview.imp.LoadMoreListView
+            android:id="@+id/take_part_record"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/c_f3f3f3"
+            android:divider="@color/c_f3f3f3"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarSize="@dimen/s_4dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@android:color/transparent"
+            android:scrollbars="none" />
+
+    </com.shinc.duobaohui.customview.ptr.PtrClassicFrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/goto_new_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/c_e4e4e4" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/goto_new_active_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="第3期正在火热进行..."
+            android:textColor="@color/c_afafaf"
+            android:textSize="@dimen/s_14dp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/goto_new_active"
+            style="@style/red_btn_style"
+            android:layout_width="@dimen/s_140dp"
+            android:layout_height="@dimen/s_35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_15dp"
+            android:gravity="center"
+            android:text="@string/goto_new_active"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/s_16dp" />
+    </RelativeLayout>
+
+    <com.shinc.duobaohui.customview.imp.WaitLoading
+        android:id="@+id/wait_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/product_detail_title"
+        android:background="@color/fff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/no_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/product_detail_title"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/s_150dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_noweb" />
+    </RelativeLayout>
+</RelativeLayout>

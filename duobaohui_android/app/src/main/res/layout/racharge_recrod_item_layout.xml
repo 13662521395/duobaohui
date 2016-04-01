@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/s_10dp">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/racharge_recrod_item_layout_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/s_10dp"
+        android:paddingTop="@dimen/s_8dp"
+        android:text="支付宝"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_16sp" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/racharge_recrod_item_layout_payCreateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/racharge_recrod_item_layout_name"
+        android:layout_marginTop="@dimen/s_2dp"
+        android:paddingLeft="@dimen/s_10dp"
+        android:text="2015-10-10"
+        android:textColor="@color/c_afafaf" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/racharge_recrod_item_layout_item_layout_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/racharge_recrod_item_layout_payCreateTime"
+        android:layout_marginTop="@dimen/s_5dp"
+        android:paddingLeft="@dimen/s_10dp"
+
+        android:text="未付款"
+        android:textColor="@color/c_ff5a5a" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/racharge_recrod_item_layout_pay_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/s_10dp"
+        android:paddingRight="@dimen/s_10dp"
+        android:text="¥ 20.0"
+        android:textColor="@color/c_ff5a5a" />
+
+</RelativeLayout>

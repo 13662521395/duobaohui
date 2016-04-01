@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="计算详情"
+            android:textSize="@dimen/s_20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/calculate_formula_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/s_65dp"
+                android:layout_margin="@dimen/s_10dp"
+                android:background="@drawable/red_layout_bg"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:text="@string/calculate_formula"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/s_16dp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/s_8dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:text="[(数值A+数值B)/商品所需人次]取余数+10000001"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/s_14dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/content_calculate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/s_10dp">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_15dp"
+                    android:text="数值A"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:text="= 截止该商品开奖时间点前最后50条全站参与记录之和"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_14dp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/dengyu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:text="="
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_14dp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/computional_details_layout_tvACode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/s_5dp"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:layout_toRightOf="@id/dengyu"
+                        android:text=" ?"
+                        android:textColor="@color/c_ff5a5a"
+                        android:textSize="@dimen/s_14dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/computional_details_layout_open_layout"
+                        android:layout_width="@dimen/s_50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/s_10dp">
+
+
+                        <ImageView
+                            android:id="@+id/computional_details_layout_open_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s_10dp"
+                            android:src="@drawable/icon_details_open" />
+
+                        <com.shinc.duobaohui.customview.imp.CustomTextView
+                            android:id="@+id/computional_details_layout_open_show_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s_3dp"
+                            android:layout_toLeftOf="@id/computional_details_layout_open_icon"
+                            android:text="展开"
+                            android:textColor="@color/c_00b7ee"
+                            android:textSize="@dimen/s_13dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/computational_details_layout_show_data"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dengyu"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:background="@color/c_f7f7f7"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/s_0.5dp"
+                            android:background="@color/c_e4e4e4" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <com.shinc.duobaohui.customview.imp.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/s_10dp"
+                                android:layout_marginLeft="@dimen/s_10dp"
+                                android:layout_marginTop="@dimen/s_10dp"
+                                android:layout_weight="0.5"
+                                android:gravity="left|center_vertical"
+                                android:text="夺宝时间"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/s_14sp" />
+
+                            <com.shinc.duobaohui.customview.imp.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/s_10dp"
+                                android:layout_marginLeft="@dimen/s_10dp"
+                                android:layout_marginTop="@dimen/s_10dp"
+                                android:layout_weight="0.25"
+                                android:gravity="center"
+                                android:text="生成数值"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/s_14sp" />
+
+                            <com.shinc.duobaohui.customview.imp.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/s_10dp"
+                                android:layout_marginLeft="@dimen/s_10dp"
+                                android:layout_marginTop="@dimen/s_10dp"
+                                android:layout_weight="0.25"
+                                android:gravity="center"
+                                android:text="用户账号"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/s_14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/s_0.5dp"
+                            android:background="@color/c_e4e4e4" />
+
+                        <com.shinc.duobaohui.customview.imp.ReListView
+                            android:id="@+id/computional_details_layout_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:listSelector="@color/c_ffffff"
+                            android:scrollbarSize="@dimen/s_4dp"
+                            android:scrollbarStyle="outsideOverlay"
+                            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+                            android:scrollbarTrackVertical="@android:color/transparent" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_marginBottom="@dimen/s_15dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:background="@drawable/shape_cut_off_line"
+                    android:layerType="software" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="数值B"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:text="= 最近一期中国福利彩票“老时时彩”的开奖结果"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_14dp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/dengyu_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:text="="
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_14dp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/computional_details_layout_lotter_results"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/s_5dp"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:layout_toRightOf="@id/dengyu_two"
+                        android:text="12345"
+                        android:textColor="@color/c_ff5a5a"
+                        android:textSize="@dimen/s_14dp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/computional_details_layout_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/s_8dp"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:layout_toRightOf="@id/computional_details_layout_lotter_results"
+                        android:text="(第20151212068)"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_14dp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/computional_details_layout_query"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/s_8dp"
+                        android:layout_marginLeft="@dimen/s_8dp"
+                        android:layout_marginRight="@dimen/s_10dp"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:layout_toRightOf="@id/computional_details_layout_period"
+                        android:drawablePadding="@dimen/s_5dp"
+                        android:text="开奖查询"
+                        android:textColor="@color/c_00b7ee"
+                        android:textSize="@dimen/s_14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/s_4dp"
+                    android:paddingRight="@dimen/s_3dp">
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="@dimen/s_3dp"
+                        android:text="注: 如遇到福彩中心通讯故障，无法获取上述期数的中国福利彩票 ”老时时彩“ 开奖结果，且24小时内该期 ”老时时彩“ 开奖结果仍未公布，则默认”老时时彩开奖结果为00000“。"
+                        android:textColor="@color/c_afafaf"
+                        android:textSize="@dimen/s_13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/s_50dp"
+                android:layout_marginTop="@dimen/s_10dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/s_10dp">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="计算结果"
+
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/s_40dp"
+                    android:text="幸运号码："
+                    android:textColor="@color/c_afafaf"
+                    android:textSize="14dp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/computional_details_layout_lucky"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:text=""
+                    android:textColor="@color/c_ff5a5a"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

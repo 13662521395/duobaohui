@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/s_54dp"
+    android:background="@drawable/white_gray_bg_selector"
+    android:gravity="center_vertical">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/search_page_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_49dp"
+        android:gravity="center_vertical"
+        android:text="hahah"
+        android:paddingLeft="@dimen/s_10dp"
+        android:textColor="@color/c_7a848c"
+        android:textSize="@dimen/s_15sp" />
+
+</LinearLayout>

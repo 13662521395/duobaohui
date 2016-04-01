@@ -1,0 +1,306 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">夺宝会</string>
+    <string name="title_activity_main">DuoBaoHui</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_send">发送</string>
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <string name="getting_prepayid">正在获取预支付订单...</string>
+    <string name="wx_return_error_info">微信支付失败，请跟换支付方式</string>
+
+
+    <string name="app_back">返回</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_continue">继续</string>
+
+    <string name="app_set">设置</string>
+    <string name="app_save">保存</string>
+    <string name="app_delete">删除</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+
+    <!-- applet -->
+    <string name="applet_secimg_title">填写验证码</string>
+    <string name="applet_secimg_change">换一张图片</string>
+    <string name="applet_seccode_tip">验证码不能为空</string>
+    <string name="applet_seccode_fail_tip">验证码错误，请重新输入</string>
+
+    <!-- verify -->
+    <string name="verify_password_null_tip">密码不能为空，请输入密码</string>
+
+    <!-- format -->
+    <string name="fmt_date">M月d日</string>
+    <string name="fmt_longdate">yyyy年M月d日</string>
+    <string name="fmt_datetime" formatted="false">M月d日 %skk:mm</string>
+    <string name="fmt_patime">kk:mm</string>
+    <string name="fmt_longtime" formatted="false">yyyy年M月d日 %skk:mm</string>
+    <string name="fmt_in60min" formatted="false">%d分钟前</string>
+    <string name="fmt_justnow">1分钟内</string>
+    <string name="fmt_dawn">凌晨</string>
+    <string name="fmt_morning">早上</string>
+    <string name="fmt_noon">中午</string>
+    <string name="fmt_afternoon">下午</string>
+    <string name="fmt_evening">晚上</string>
+    <string name="fmt_pre_yesterday">昨天</string>
+    <string name="fmt_iap_err" formatted="false">网络连接不可用，请稍候重试</string>
+
+    <string name="hello">Hello World, SDKSampleActivity!</string>
+    <string name="app_share">分享</string>
+
+    <string name="enter">这是SDK_Sample的入口界面</string>
+    <string name="reg">将该app注册到微信</string>
+    <string name="goto_send">跳转到发消息界面</string>
+    <string name="goto_pay">跳转到支付界面</string>
+    <string name="goto_fav">跳转到收藏界面</string>
+    <string name="launch_wx">启动微信</string>
+    <string name="check_timeline_supported">检查是否支持发送到朋友圈</string>
+
+    <string name="send_to_wx_title">发送到微信</string>
+    <string name="get_from_wx_title">从微信接收</string>
+    <string name="show_from_wx_title">显示微信请求的消息</string>
+    <string name="pay_by_wx_title">通过微信支付</string>
+    <string name="prepay_id_wx_text">prepayid</string>
+    <string name="invoke_ip">invoke_ip</string>
+    <string name="prepay_id_value">wx20141126110244e3e4bc4e580111072793</string>
+
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <string name="launch_from_wx">Launch From Weixin</string>
+
+    <!-- WXMediaMessage -->
+    <string name="input_openid">输入openid</string>
+    <string name="input_scope">输入scope</string>
+
+    <string name="send">发送到微信</string>
+    <string name="receive">从微信接收</string>
+
+    <string name="is_timeline">是否分享到朋友圈</string>
+    <string name="send_text">发送文本</string>
+    <string name="send_text_default">这段文字发送自微信SDK示例程序</string>
+
+    <string name="send_img">发送图片</string>
+    <string-array name="send_img_item">
+        <item>发送图片的二进制数据</item>
+        <item>发送图片的本地路径</item>
+        <item>发送图片的URL</item>
+    </string-array>
+    <string name="send_img_file_not_exist">文件不存在</string>
+
+    <string name="send_file">发送文件</string>
+    <string-array name="send_file_item">
+        <item>发送文件的二进制数据</item>
+        <item>发送文件的本地路径</item>
+    </string-array>
+    <string name="send_file_file_not_exist">文件不存在</string>
+
+    <string name="send_pic">发送照片</string>
+
+    <string name="send_music">发送音乐</string>
+    <string-array name="send_music_item">
+        <item>发送音乐url</item>
+        <item>发送低带宽音乐url</item>
+    </string-array>
+
+    <string name="send_video">发送视频</string>
+    <string-array name="send_video_item">
+        <item>发送视频url</item>
+        <item>发送低带宽视频url</item>
+    </string-array>
+
+    <string name="send_webpage">发送网页</string>
+    <string-array name="send_webpage_item">
+        <item>发送网页url</item>
+    </string-array>
+
+    <string name="send_appdata">发送app消息</string>
+    <string-array name="send_appdata_item">
+        <item>发送app文件本地路径</item>
+        <item>发送app二进制数据</item>
+        <item>发送无附件的app</item>
+    </string-array>
+
+    <string name="send_emoji">发送表情消息</string>
+    <string-array name="send_emoji_item">
+        <item>发送表情本地路径</item>
+        <item>发送表情二进制数据</item>
+    </string-array>
+
+    <string-array name="send_emoji_item_format">
+        <item>发送GIF图片</item>
+        <item>发送非GIF图片</item>
+    </string-array>
+
+    <!-- GetFromWXActivity -->
+    <string name="share_text_to_weixin">回应文本到微信</string>
+    <string name="share_text_default">这段文字回应自微信SDK示例程序</string>
+    <string name="share_url_to_weixin">回应URL到微信</string>
+    <string name="share_pic_to_weixin">回应图片到微信</string>
+    <string name="share_music_to_weixin">回应音乐到微信</string>
+    <string name="share_video_to_weixin">回应视频到微信</string>
+    <string name="share_appdata_to_weixin">回应app消息到微信</string>
+
+    <string name="register_as_weixin_app_sender">注册微信事件发送器</string>
+    <string name="get_token_from_weixin">获取微信访问Token</string>
+    <string name="unregister_from_weixin">从微信反注册</string>
+
+    <string name="show_from_wx_tip">这个界面用于显示微信向第三方app请求显示的信息</string>
+
+    <!-- PayActivity -->
+    <string name="unifiedorder_v3_wx">APP支付生成预支付订单</string>
+    <string name="pay__pre_by_wxap">生成APP微信支付参数</string>
+
+    <string name="pay_by_wxap">调起微信支付</string>
+    <string name="check_pay">检查微信版本是否支持支付</string>
+    <string name="input_reqkey">输入reqkey</string>
+    <string name="input_package_value">输入package value</string>
+    <string name="input_sign">输入sign</string>
+    <string name="getting_access_token">正在获取access token...</string>
+    <string name="get_access_token_succ">获取access token成功</string>
+    <string name="get_access_token_fail" formatted="false">获取access token失败，原因%s</string>
+
+    <string name="paying">支付中</string>
+    <string name="get_prepayid_succ">获取prepayid成功</string>
+    <string name="get_prepayid_fail" formatted="false">获取prepayid失败，原因%s</string>
+
+    <!-- WXPayEntryActivity -->
+
+
+    <!-- BC-test -->
+    <string name="bc_pay" formatted="false">微信支付</string>
+    <string name="bc_pay_wx_title">微信支付</string>
+    <string name="bc_pay_goto_wx">打开微信支付</string>
+
+    <!-- zpl login-->
+
+    <string name="login_edit_hint">请输入手机号码</string>
+    <string name="login_edit_psw">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="other_login">第三方登陆</string>
+    <string name="goto_register"><u>立即注册</u></string>
+    <string name="forget_psw"><u>忘记密码？</u></string>
+
+    <!-- zpl register-->
+
+    <string name="register_edit_phone_num">请输入手机号码</string>
+    <string name="register_edit_verify_code">请输入验证码</string>
+    <string name="register_get_verify_code">获取验证码</string>
+    <string name="register_edit_psw">请输入密码</string>
+    <string name="register_edit_psw_repeat">请再次输入密码</string>
+    <string name="register">注册</string>
+    <string name="goto_login"><u>已注册，去登录</u></string>
+    <string name="register_agree">同意</string>
+    <string name="user_protocol"><u>服务协议</u></string>
+    <string name="nick_name_hint">请设置您的昵称(汉字,数字,字母,_ 10个字符以内)</string>
+
+    <!-- zpl user info-->
+    <string name="user_info">个人信息</string>
+    <string name="user_info_header">头像</string>
+    <string name="user_info_nickname">昵称</string>
+    <string name="user_info_sex">性别</string>
+    <string name="user_info_real_name">真实姓名</string>
+    <string name="user_info_grade">年级</string>
+    <string name="user_info_school">学校</string>
+    <string name="user_info_class">班级</string>
+    <string name="user_info_address">所在地</string>
+
+    <!-- zpl complete user info-->
+    <string name="complete_user_info">完善信息</string>
+    <string name="complete_edit_name">请输入姓名</string>
+    <string name="complete_select_sex">请选择性别</string>
+    <string name="complete_select_province">请选择省份&#8212;市/区</string>
+    <string name="complete_select_city">请选择市/区</string>
+    <string name="complete_select_school">请选择学校</string>
+    <string name="complete_select_grade">请选择年级</string>
+    <string name="commit">提交</string>
+
+    <!-- zpl video play-->
+
+    <string name="play_title">数学 高一上学期</string>
+    <string name="video_name">视频名称</string>
+    <string name="video_speaker">讲师：吴老师</string>
+    <string name="video_tag">标签：集合、元素</string>
+    <string name="video_info">集合(简称集)是数学中一个基本概念，它是集合论的研究对象......</string>
+    <string name="title_fragment_offlinedown_ttext">在线教育</string>
+    <string name="title_fragment_offlinedown_right_btn">编辑</string>
+    <string name="navi_fragment_offlinedown_alreadydown">已下载</string>
+    <string name="navi_fragment_offlinedown_downing">正在下载</string>
+    <string name="activity_collect_history_title_tv">观看历史</string>
+
+    <!-- zpl user protocol-->
+
+    <string name="user_protocol_title">服务协议</string>
+    <string name="course_search_hint">搜索本课程内的视频</string>
+
+    <!-- zpl find password-->
+    <string name="find_password">找回密码</string>
+    <string name="find_password_commit">提交</string>
+
+    <!-- zpl dialog select sex-->
+    <string name="sex">性别</string>
+    <string name="man">男</string>
+    <string name="female">女</string>
+
+    <!-- zpl select address -->
+    <string name="select_address">所在地</string>
+
+    <string name="current_address">当前定位</string>
+
+
+    <!-- zpl select grade-->
+
+    <!--<String name="chu"/>--><!--lgp-->
+    <drawable name="clr_normal">@color/c_e4e4e4</drawable>
+    <drawable name="clr_pressed">@color/c_ffffff</drawable>
+    <drawable name="clr_13a083">
+        @color/c_13a083
+    </drawable>
+    <drawable name="clr_3ad0af">@color/c_3ad0af</drawable>
+    <drawable name="clr_2ed1af">@color/c_2ed1af</drawable>
+    <string name="depcit">请留下您的宝贵意见和建议，我们将尽快改进，把最好的体验带给您！</string>
+    <string name="activity_history_history_title_tv">历史记录</string>
+    <string name="history_bottom_delete">删除</string>
+    <string name="cd">揭晓倒计时:</string>
+
+    <string name="app">夺宝会</string>
+    <string name="goto_register_new"><u>注册新用户</u></string>
+
+
+    <string name="calculate_detail">计算详情</string>
+    <string name="goto_new_active">1元夺宝</string>
+
+    <string name="calculate_formula"><b>计算公式</b></string>
+
+    <string name="select_buy_num">请选择参与人次</string>
+    <string name="user_page_title">TA的主页</string>
+    <string name="win_detail_addressOK">使用此地址</string>
+    <string name="duobaoRecord">夺宝记录</string>
+    <string name="all">全部</string>
+    <string name="toBeComfirmInfo">待揭晓</string>
+    <string name="offTheStocks">已揭晓</string>
+    <string name="expiryDate">待领奖</string>
+    <string name="expiryDateTime">请确认收货信息</string>
+    <string name="choiceAddressDefualt">选择收货地址</string>
+    <string name="sendThePrize">派奖中</string>
+    <string name="goodToBeReceived">待收货</string>
+    <string name="confirmGoodToBeReceived">确认收货</string>
+    <string name="completedShowOeder">晒单</string>
+    <string name="goCompletedTime">去晒单</string>
+    <string name="logistcsInformation">物流信息</string>
+    <string name="addressInfomation">收货信息</string>
+    <string name="no_user_red_enevlope">不使用红包</string>
+    <string name="choose_red_eneclope">选择红包</string>
+    <string name="finish_pay_page">取消订单</string>
+
+</resources>

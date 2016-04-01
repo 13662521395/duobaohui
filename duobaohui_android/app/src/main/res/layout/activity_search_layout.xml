@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f7f7f7">
+
+    <RelativeLayout
+        android:id="@+id/search_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="@dimen/s_14dp"
+            android:paddingLeft="@dimen/s_11dp"
+            android:paddingRight="@dimen/s_11dp"
+            android:paddingTop="@dimen/s_14dp"
+            android:src="@drawable/icon_back" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/product_search"
+            android:layout_width="@dimen/s_35dp"
+            android:layout_height="@dimen/s_30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/s_8dp"
+            android:background="@drawable/red_btn_selector"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/c_ffffff"
+            android:textSize="@dimen/s_13dp"
+            android:visibility="gone" />
+
+        <com.shinc.duobaohui.customview.imp.AutoClearEditText
+            android:id="@+id/product_search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/back_img"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/s_30dp"
+            android:singleLine="true"
+            android:textSize="@dimen/s_12dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+
+    </RelativeLayout>
+
+    <com.shinc.duobaohui.customview.imp.SearchPageInfoViewImpl
+        android:id="@+id/search_page_info_view_impl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_title" />
+
+
+    <com.shinc.duobaohui.customview.imp.SearchRealTimeResultImpl
+        android:id="@+id/search_real_time_result_impl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/search_title"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.shinc.duobaohui.customview.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ptr_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <com.shinc.duobaohui.customview.imp.LoadMoreListView
+            android:id="@+id/duobao_fragment_layout_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/c_efefef"
+            android:dividerHeight="@dimen/s_0.5dp"
+            android:listSelector="@drawable/grid_item1_selector"
+            android:scrollbarSize="@dimen/s_4dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@android:color/transparent" />
+
+
+    </com.shinc.duobaohui.customview.ptr.PtrClassicFrameLayout>
+
+    <include
+        android:id="@+id/inclue_no_data"
+        layout="@layout/no_data_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.shinc.duobaohui.customview.imp.WaitLoading
+        android:id="@+id/wait_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/no_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/s_150dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_noweb" />
+    </RelativeLayout>
+</RelativeLayout>

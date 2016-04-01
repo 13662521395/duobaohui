@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="夺宝会"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/s_55dp"
+        android:src="@drawable/icon_my_about_logo" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/s_20dp"
+        android:text="夺宝会"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_18sp" />
+
+    <TextView
+        android:id="@+id/versioncode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:text="V1.0"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_15dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/versioncode"
+        android:layout_marginLeft="@dimen/s_15dp"
+        android:layout_marginTop="@dimen/s_35dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_my_about_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_5dp"
+                android:text="公平公正公开"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_my_about_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_5dp"
+                android:text="正品保证"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_my_about_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_5dp"
+                android:text="权益保障"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_15dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="@dimen/s_15dp"-->
+        <!--android:visibility="gone">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/what"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="@dimen/s_15dp"-->
+        <!--android:layout_toLeftOf="@+id/view"-->
+        <!--android:text="什么是夺宝会"-->
+        <!--android:textColor="#00b7ee"-->
+        <!--android:textSize="@dimen/s_15dp" />-->
+
+        <!--<View-->
+        <!--android:id="@+id/view"-->
+        <!--android:layout_width="@dimen/s_1dp"-->
+        <!--android:layout_height="@dimen/s_15dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:background="#00b7ee"></View>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/s_15dp"-->
+        <!--android:layout_toRightOf="@+id/view"-->
+        <!--android:text="隐私政策"-->
+        <!--android:textColor="#00b7ee"-->
+        <!--android:textSize="@dimen/s_15dp" />-->
+        <!--</RelativeLayout>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/s_20dp"
+            android:text="客服Q群：515848680" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/s_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/abort_me_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:text="我们是谁"
+                    android:textColor="#00b7ee"
+                    android:textSize="@dimen/s_15dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="|"
+                    android:textColor="#00b7ee"
+                    android:textSize="@dimen/s_15dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/Protocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_toRightOf="@id/abort_me_text"
+                    android:text="@string/user_protocol"
+                    android:textColor="#00b7ee"
+                    android:textSize="@dimen/s_15dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/s_15dp"
+            android:text="Copyright © 2015 小树科技"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/s_10dp"
+            android:text="哈尔滨小树科技有限公司 版权所有"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_13dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

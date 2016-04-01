@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_45dp"
+        android:background="@color/c_ffffff">
+
+        <ImageView
+            android:id="@+id/person_info_layout_img_back"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人资料"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_info_layout_id_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_60dp"
+        android:layout_marginTop="@dimen/s_0.5dp"
+        android:background="@color/c_ffffff">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="头像"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18sp" />
+
+        <com.shinc.duobaohui.customview.imp.CircleImageView
+            android:id="@+id/headimageview"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="@dimen/s_40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_25dp"
+            android:src="@drawable/icon_head_small" />
+
+        <ImageView
+            android:layout_width="@dimen/s_13dp"
+            android:layout_height="@dimen/s_14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:src="@drawable/icon_more" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_info_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_45dp"
+        android:layout_marginTop="@dimen/s_0.5dp"
+        android:background="@color/c_ffffff">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="ID"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18sp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/person_info_layout_id_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:text="123456578"
+            android:textColor="@color/c_afafaf"
+            android:textSize="@dimen/s_18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_info_layout_accountNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_45dp"
+        android:layout_marginTop="@dimen/s_0.5dp"
+        android:background="@color/c_ffffff">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="账号"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18sp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/person_info_layout_accountNumber_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:text="liugaopo@shinc.net"
+            android:textColor="@color/c_afafaf"
+            android:textSize="@dimen/s_18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_info_layout_nickName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_45dp"
+        android:layout_marginTop="@dimen/s_0.5dp"
+        android:background="@color/c_ffffff">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="昵称"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18sp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/person_info_layout_nickName_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_25dp"
+            android:text="去夺宝啊"
+            android:textColor="@color/c_afafaf"
+            android:textSize="@dimen/s_18sp" />
+
+        <ImageView
+            android:layout_width="@dimen/s_13dp"
+            android:layout_height="@dimen/s_14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:src="@drawable/icon_more" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_info_layout_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_45dp"
+        android:layout_marginTop="@dimen/s_1dp"
+        android:background="@color/c_ffffff"
+        android:visibility="gone">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="手机号码"
+            android:textSize="@dimen/s_18sp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_25dp"
+            android:text="17710362783"
+            android:textColor="@color/c_afafaf"
+            android:textSize="@dimen/s_18sp" />
+
+        <ImageView
+            android:layout_width="@dimen/s_13dp"
+            android:layout_height="@dimen/s_14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:src="@drawable/icon_more" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_info_layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_45dp"
+        android:layout_marginTop="@dimen/s_0.5dp"
+        android:background="@color/c_ffffff">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:text="地址管理"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18sp" />
+
+        <ImageView
+            android:layout_width="@dimen/s_13dp"
+            android:layout_height="@dimen/s_14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:src="@drawable/icon_more" />
+    </RelativeLayout>
+
+
+</LinearLayout>

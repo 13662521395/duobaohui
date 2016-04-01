@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/lottery_layout_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/back_win" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/lattery_layout_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/s_253dp"
+        android:gravity="center"
+        android:textColor="@color/c_4d1d0d"
+        android:textSize="@dimen/s_10sp" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/lattery_layout_periodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lattery_layout_period"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/s_1dp"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:maxWidth="@dimen/s_185dp"
+        android:singleLine="true"
+        android:textColor="@color/c_4d1d0d"
+        android:textSize="@dimen/s_10sp" />
+</RelativeLayout>

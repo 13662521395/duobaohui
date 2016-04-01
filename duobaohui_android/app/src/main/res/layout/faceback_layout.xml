@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@color/c_ffffff">
+
+        <ImageView
+            android:id="@+id/faceback_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="用户反馈"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/faceback_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_150dp"
+            android:layout_margin="@dimen/s_10dp"
+            android:background="@drawable/facebook_edit_color"
+            android:gravity="center_horizontal|left"
+            android:hint="@string/depcit"
+            android:padding="@dimen/s_10dp"
+            android:textColor="@color/c_666666"
+            android:textColorHint="@color/c_afafaf"
+            android:textSize="@dimen/s_13sp" />
+
+        <TextView
+            android:id="@+id/facevback_tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/s_20dp"
+            android:layout_alignBottom="@+id/faceback_edit"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:text="0/200"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/faceback_btn_submit"
+            style="@style/red_btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_35dp"
+            android:layout_below="@+id/facevback_tvNumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/s_30dp"
+            android:layout_marginRight="@dimen/s_30dp"
+            android:layout_marginTop="@dimen/s_30dp"
+            android:text="提 交"
+            android:textColor="@color/c_ffffff"
+            android:textSize="@dimen/s_16sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/s_70dp"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/s_10dp">
+
+        <CheckBox
+            android:id="@+id/cb_collect"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_15dp"
+            android:drawablePadding="@dimen/s_3dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingBottom="@dimen/s_12dp"
+            android:paddingTop="@dimen/s_12dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_toRightOf="@+id/cb_collect"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_10dp"
+                android:orientation="horizontal">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/item_recieve_address_layout_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="集合的含义"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/item_recieve_address_layout_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1324567864"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+            </RelativeLayout>
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/item_recieve_address_layout_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_12dp"
+                android:text="啊搜噶搜噶搜噶是个啊嘎斯嘎"
+                android:textColor="@color/c_afafaf"
+                android:textSize="@dimen/s_11sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

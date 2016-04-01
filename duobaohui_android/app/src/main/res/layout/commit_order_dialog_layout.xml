@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/s_125dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/select_num_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_70dp"
+        android:orientation="horizontal">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/commit_order_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_weight="0.4"
+            android:text="@string/select_buy_num" />
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_below="@id/commit_order_title">-->
+
+        <LinearLayout
+            android:id="@+id/select_buy_num_layout"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/s_35dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:layout_weight="0.6"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/num_min"
+                android:layout_width="39dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/num_sub_selector"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/buy_num"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/edit_buy_num_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="1"
+                android:textColor="@color/c_ff3333" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/num_add"
+                android:layout_width="39dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/num_add_selector"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/cut_off_line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_0.5dp"
+        android:layout_below="@id/select_num_title"
+        android:background="@color/c_e4e4e4" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_55dp"
+        android:layout_below="@id/cut_off_line">
+
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/commit_order_btn"
+            style="@style/red_btn_style"
+            android:layout_width="@dimen/s_140dp"
+            android:layout_height="@dimen/s_35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/s_16dp" />
+
+    </RelativeLayout>
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

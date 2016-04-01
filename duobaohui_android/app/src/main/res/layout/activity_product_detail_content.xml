@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/news_content_titlerl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/news_content_title_backimg"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/news_content_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="图文详情"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/news_content_title_menuimg"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/s_25dp"
+            android:paddingRight="@dimen/s_20dp"
+            android:src="@drawable/icon_more"
+            android:visibility="gone" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/news_content_comment_numtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/news_content_title_menuimg"
+            android:gravity="center"
+            android:minWidth="@dimen/s_80dp"
+            android:singleLine="true"
+            android:text="图文详情"
+            android:textSize="@dimen/s_14dp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_efefef" />
+    </RelativeLayout>
+
+    <!--<com.shihe.news.articlelibrary.customview.impl.NewsContentAddCommentViewImpl-->
+
+    <!--android:id="@+id/news_content_add_commentImpl"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="@dimen/s_55dp"-->
+    <!--android:layout_alignParentBottom="true" />-->
+
+
+    <com.shinc.duobaohui.customview.imp.ProductContentWebViewImpl
+        android:id="@+id/news_content_webviewimpl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/news_content_titlerl"
+        android:clipToPadding="true"
+        android:paddingBottom="@dimen/s_3dp"
+        android:paddingLeft="@dimen/s_3dp"
+        android:paddingRight="@dimen/s_3dp" />
+
+
+    <ProgressBar
+        android:id="@+id/news_content_loading_iv"
+        android:layout_width="@dimen/s_30dp"
+        android:layout_height="@dimen/s_30dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:indeterminateDrawable="@drawable/wait_for_progress_large"
+        android:indeterminateDuration="700"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/news_content_reload_img"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/news_content_titlerl"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/s_200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_launcher" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

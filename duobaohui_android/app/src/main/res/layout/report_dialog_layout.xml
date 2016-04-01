@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/s_280dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/report_dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_46dp">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="举报原因"
+            android:textSize="@dimen/s_18dp"
+            android:textColor="@color/c_666666"/>
+    </RelativeLayout>
+    <com.shinc.duobaohui.customview.imp.ReListView
+        android:id="@+id/report_reason_list"
+        android:layout_width="@dimen/s_200dp"
+        android:layout_height="@dimen/s_215dp"
+        android:layout_below="@id/report_dialog_title"
+        android:layout_centerHorizontal="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/s_10dp"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@drawable/grid_select_color" />
+
+
+    <LinearLayout
+        android:id="@+id/report_btn_layout"
+        android:layout_below="@id/report_reason_list"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_50dp">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/confirm_btn"
+            style="@style/red_btn_style"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/s_30dp"
+            android:layout_marginBottom="@dimen/s_10dp"
+            android:layout_marginLeft="@dimen/s_12dp"
+            android:layout_marginRight="@dimen/s_12dp"
+            android:layout_marginTop="@dimen/s_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/cancel_btn"
+            style="@style/red_btn_style"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/s_30dp"
+            android:layout_marginBottom="@dimen/s_10dp"
+            android:layout_marginLeft="@dimen/s_12dp"
+            android:layout_marginRight="@dimen/s_12dp"
+            android:layout_marginTop="@dimen/s_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

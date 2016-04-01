@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/activity_notice_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/notice_back_img"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="通知-夺宝会"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/notice_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_notice_layout_title"
+        android:layout_marginTop="@dimen/s_5dp"
+        android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
+        android:divider="@color/c_e4e4e4"
+        android:dividerHeight="@dimen/s_0.5dp"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@drawable/grid_item1_selector"
+        android:scrollbarSize="@dimen/s_4dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbarTrackVertical="@android:color/transparent" />
+
+
+    <include
+        android:id="@+id/inclue_notice_no_data"
+        layout="@layout/no_data_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.shinc.duobaohui.customview.imp.WaitLoading
+        android:id="@+id/wait_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_notice_layout_title"
+        android:background="@color/fff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/no_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_notice_layout_title"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/s_150dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_noweb" />
+    </RelativeLayout>
+</RelativeLayout>

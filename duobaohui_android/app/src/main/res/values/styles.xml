@@ -1,0 +1,87 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:style/Theme.Light.NoTitleBar">
+
+        <item name="duobao_bg">@drawable/duobao_btn_selector</item>
+        <item name="duobao_text_color">@drawable/duobao_text_selector</item>
+
+        <item name="white_btn_bg">@drawable/white_btn_selector</item>
+        <item name="white_text_color">@drawable/white_text_selector</item>
+        <item name="red_btn_bg">@drawable/red_btn_selector</item>
+        <item name="red_text_color">@drawable/red_text_selector</item>
+
+        <item name="colorPrimary">@color/c_ff3333</item>
+        <item name="colorPrimaryDark">@color/c_ff3333</item>
+        <item name="actionBarSize">@dimen/s_48dp</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/c_afafaf</item>
+        <item name="android:drawableLeft">@drawable/check_box_bg_selector</item>
+    </style>
+
+    <style name="CircleCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/circle_checkout_bg</item>
+        <item name="android:textColor">@color/c_afafaf</item>
+     </style>
+
+    <style name="SelectPayCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/pay_check_box_bg_selector</item>
+    </style>
+
+    <style name="No_ActionBar" parent="AlertDialog.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="title_bk_color">@color/c_ff5a5a</item>
+        <item name="title_font_bk_color">@color/fff</item>
+        <item name="title_black_buttton">@drawable/icon_back</item>
+
+        <item name="money_font_color">@color/c_333</item>
+        <item name="money_font_price_color">@color/c_333</item>
+
+        <item name="item_img_bk">@drawable/intnt_blck</item>
+        <item name="item_font_color">@color/c_333</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@drawable/loading_bg_shape</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="blackDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="popupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+
+</resources>

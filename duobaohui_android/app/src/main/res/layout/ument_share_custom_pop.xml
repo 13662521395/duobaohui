@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/share_show_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/s_10dp"
+            android:text="中奖了要不要稍微得瑟下～"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_1dp"
+            android:background="@color/c_efefef" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_22dp"
+            android:layout_marginRight="@dimen/s_22dp"
+            android:layout_marginTop="@dimen/s_10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/share_wx_zone"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_105dp"
+                android:layout_weight="1"
+                android:background="@drawable/umeng_socialize_shareboard_item_background"
+                android:paddingBottom="@dimen/s_10dp"
+                android:paddingTop="@dimen/s_10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/s_60dp"
+                    android:layout_height="@dimen/s_60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/icon_friends" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="微信朋友圈"
+                    android:textSize="@dimen/s_15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/share_wx"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_105dp"
+                android:layout_weight="1"
+                android:background="@drawable/umeng_socialize_shareboard_item_background"
+                android:paddingBottom="@dimen/s_10dp"
+                android:paddingTop="@dimen/s_10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/s_60dp"
+                    android:layout_height="@dimen/s_60dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/icon_weixin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="微信好友"
+                    android:textSize="@dimen/s_15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/share_sina"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_105dp"
+                android:layout_weight="1"
+                android:background="@drawable/umeng_socialize_shareboard_item_background"
+                android:paddingBottom="@dimen/s_10dp"
+                android:paddingTop="@dimen/s_10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/s_60dp"
+                    android:layout_height="@dimen/s_60dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/icon_weibo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="新浪微博"
+                    android:textSize="@dimen/s_15dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/s_10dp"
+            android:layout_marginLeft="@dimen/s_22dp"
+            android:layout_marginRight="@dimen/s_22dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/share_qq"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_105dp"
+                android:layout_weight="1"
+                android:background="@drawable/umeng_socialize_shareboard_item_background"
+                android:paddingBottom="@dimen/s_10dp"
+                android:paddingTop="@dimen/s_10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/s_60dp"
+                    android:layout_height="@dimen/s_60dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/icon_qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="QQ"
+                    android:textSize="@dimen/s_15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/share_tx_wb"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_105dp"
+                android:layout_weight="1"
+                android:background="@drawable/umeng_socialize_shareboard_item_background"
+                android:paddingBottom="@dimen/s_10dp"
+                android:paddingTop="@dimen/s_10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/s_60dp"
+                    android:layout_height="@dimen/s_60dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/qzone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="QQ空间"
+                    android:textSize="@dimen/s_15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/share_email"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_105dp"
+                android:layout_weight="1"
+                android:background="@drawable/umeng_socialize_shareboard_item_background"
+                android:paddingBottom="@dimen/s_10dp"
+                android:paddingTop="@dimen/s_10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/s_60dp"
+                    android:layout_height="@dimen/s_60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/icon_mail" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="电子邮件"
+                    android:textSize="@dimen/s_15dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:background="#efefef" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/share_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_48dp"
+            android:background="@drawable/layout_grey_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#333333"
+            android:textSize="@dimen/s_15dp" />
+
+    </LinearLayout>
+</RelativeLayout>

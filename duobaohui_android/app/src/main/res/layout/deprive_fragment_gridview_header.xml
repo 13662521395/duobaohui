@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.shinc.duobaohui.customview.banner.ConvenientBanner
+        android:id="@+id/deprive_precious_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_180dp"
+        app:canLoop="true" />
+
+    <RelativeLayout
+        android:id="@+id/inform_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_30dp"
+        android:layout_marginBottom="@dimen/s_10dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/deprive_inform_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:src="@drawable/icon_news" />
+
+        <com.shinc.duobaohui.customview.imp.AutoTextView
+            android:id="@+id/inform_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:layout_toRightOf="@id/deprive_inform_icon"
+            android:singleLine="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

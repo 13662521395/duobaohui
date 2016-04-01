@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/s_80dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/search_result_img"
+        android:layout_width="@dimen/s_80dp"
+        android:layout_height="@dimen/s_60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:layout_marginBottom="@dimen/s_10dp"
+        android:src="@drawable/pic_listnopic" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_toRightOf="@id/search_result_img">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/search_real_time_result_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="hahah"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_16dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/search_need_time_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/search_real_time_result_left">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/s_10dp"
+                android:layout_toLeftOf="@+id/goto_current">
+
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/search_result_need_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/s_10dp"
+                    android:text="总需：1234"
+                    android:textColor="@color/c_afafaf"
+                    android:textSize="@dimen/s_16dp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/search_result_last_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/s_10dp"
+                    android:text="剩余：1234"
+                    android:textColor="@color/c_afafaf"
+                    android:textSize="@dimen/s_16dp" />
+
+                <ProgressBar
+                    android:id="@+id/active_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/s_3dp"
+                    android:layout_above="@id/search_result_need_time"
+                    android:layout_marginBottom="@dimen/s_5dp"
+                    android:layout_marginRight="@dimen/s_5dp"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_style" />
+
+            </RelativeLayout>
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/goto_current"
+                style="@style/duobao_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/s_25dp"
+                android:paddingLeft="@dimen/s_5dp"
+                android:paddingRight="@dimen/s_5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/s_10dp"
+                android:gravity="center"
+                android:text="1元夺宝"
+                android:textSize="@dimen/s_12dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

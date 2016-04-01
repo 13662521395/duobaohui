@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/comment_problem_item_layout_tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_35dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/s_10dp"
+        android:text="1.就问一句" />
+
+    <TextView
+        android:id="@+id/comment_problem_item_layout_tvInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_problem_item_layout_tvTitle"
+        android:gravity="center_vertical"
+        android:padding="@dimen/s_10dp"
+        android:text="你傻逼么。你是吃屎么，是二逼么，你智障么，你脑袋抽筋么，煞笔，二货，呵呵，哈哈。BB" />
+</RelativeLayout>

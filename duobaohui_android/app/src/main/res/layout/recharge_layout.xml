@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dots="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recharge_inputSoftKey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_48dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/recharge_layout_back"
+                android:layout_width="@dimen/s_40dp"
+                android:layout_height="fill_parent"
+                android:padding="@dimen/s_15dp"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="充值"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_100dp"
+            android:background="@color/c_ff5a5a"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/recharge_Img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <com.shinc.duobaohui.customview.imp.DotsTextView
+                android:id="@+id/loading_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/pay_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s_30dp"
+                dots:autoplay="false"
+                dots:period="200" />
+
+            <TextView
+                android:id="@+id/recharge_layout_tvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/s_30dp"
+                android:text="充值获的夺宝币(1元＝1夺宝币),"
+                android:textColor="@color/c_ffffff"
+                android:textSize="@dimen/s_16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/recharge_layout_tvInfo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recharge_layout_tvInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/s_4dp"
+                android:text="可用于夺宝, 充值的款项将无法退回"
+                android:textColor="@color/c_ffffff"
+                android:textSize="@dimen/s_16sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_35dp"
+            android:paddingLeft="@dimen/s_25dp"
+            android:paddingTop="@dimen/s_8dp"
+            android:text="选择充值金额(元)"
+            android:textSize="@dimen/s_15sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_135dp"
+            android:background="@color/c_ffffff"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/s_10dp"
+            android:paddingLeft="@dimen/s_15dp"
+            android:paddingRight="@dimen/s_15dp"
+            android:paddingTop="@dimen/s_10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:weightSum="3">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/recharge_layout_customTextView20"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/s_35dp"
+                    android:layout_marginRight="@dimen/s_15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="20"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/recharge_layout_customTextView50"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/s_35dp"
+                    android:layout_marginRight="@dimen/s_15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="50"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp"
+                    tools:ignore="Deprecated" />
+
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/recharge_layout_customTextView100"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/s_35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:weightSum="3">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/recharge_layout_customTextView200"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/s_35dp"
+                    android:layout_marginRight="@dimen/s_15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="200"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/recharge_layout_customTextView500"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/s_35dp"
+                    android:layout_marginRight="@dimen/s_15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="500"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_16sp" />
+
+                <EditText
+                    android:id="@+id/recharge_layout_customTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/s_35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:gravity="center"
+                    android:hint="最大金额2千"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/c_666666"
+                    android:textColorHint="@color/c_666666"
+                    android:textSize="@dimen/s_14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_35dp"
+            android:paddingLeft="@dimen/s_25dp"
+            android:paddingTop="@dimen/s_8dp"
+            android:text="选择充值方式"
+            android:textSize="@dimen/s_15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:background="@color/c_af"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/recharge_layout_alipayLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/recharge_layout_alipay"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:drawablePadding="@dimen/s_3dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingBottom="@dimen/s_12dp"
+                    android:paddingTop="@dimen/s_12dp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:text="支付宝"
+                    android:textSize="@dimen/s_15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:background="@color/c_e4e4e4"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/recharge_layout_BankCardLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/recharge_layout_collect_BankCard"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:drawablePadding="@dimen/s_3dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingBottom="@dimen/s_12dp"
+                    android:paddingTop="@dimen/s_12dp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:text="银行卡"
+                    android:textSize="@dimen/s_15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:background="@color/c_af"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/recharge_layout_WXLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/recharge_layout_collect_WXCard"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:drawablePadding="@dimen/s_3dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingBottom="@dimen/s_12dp"
+                    android:paddingTop="@dimen/s_12dp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:text="微信"
+                    android:textSize="@dimen/s_16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_0.5dp"
+                android:background="@color/c_af"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c_ffffff">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/recharge_layout_confrimRecharge"
+            style="@style/red_btn_style"
+            android:layout_width="@dimen/s_160dp"
+            android:layout_height="@dimen/s_35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="确认充值"
+            android:textSize="@dimen/s_15sp" />
+    </RelativeLayout>
+</RelativeLayout>

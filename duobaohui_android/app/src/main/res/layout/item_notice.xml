@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/s_70dp"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/s_15dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/notice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dfkl"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/s_15sp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/notice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_5sp"
+                android:textSize="@dimen/s_10sp"
+                android:textColor="@color/c_afafaf"
+                android:text="sdf"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_go"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

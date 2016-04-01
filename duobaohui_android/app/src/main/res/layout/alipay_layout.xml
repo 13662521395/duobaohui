@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/s_5dp"
+        android:background="@color/c_af" />
+
+    <CheckBox
+        android:id="@+id/check_box"
+        android:layout_centerVertical="true"
+        style="@style/CustomCheckboxTheme"
+        android:layout_marginLeft="@dimen/s_15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/alipay_layout_icon"
+        android:layout_toRightOf="@id/check_box"
+        android:layout_width="@dimen/s_30dp"
+        android:layout_height="@dimen/s_30dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/s_10dp"
+        android:src="@drawable/icon_cashier_alipay" />
+
+    <TextView
+        android:id="@+id/alipay_layout_tv_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/alipay_layout_icon"
+        android:text="支付宝支付"
+        android:textSize="@dimen/s_20sp" />
+
+    <ImageView
+        android:layout_width="@dimen/s_15dp"
+        android:layout_height="@dimen/s_15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/s_10dp"
+        android:src="@drawable/intnt_blck" />
+
+</RelativeLayout>

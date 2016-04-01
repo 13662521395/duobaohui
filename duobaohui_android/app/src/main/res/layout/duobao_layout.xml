@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/duobao_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="@color/c_ffffff"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/duobao_back"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/duobaoRecord"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/duobao_layout_title">
+
+        <LinearLayout
+            android:id="@+id/duobao_layout_frag_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/s_40dp"
+            android:background="@color/c_ffffff"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/duobao_layout_allLayout"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/duobao_layout_allTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/all"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+
+                <View
+                    android:id="@+id/duobao_v0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/s_8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/duobao_layout_linearLayoutWait"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/duobao_layout_toBeConFfrimeedTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/toBeComfirmInfo"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+
+                <View
+                    android:id="@+id/duobao_v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    android:gravity="bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/duobao_layout_linearLayoutOffTheStocks"
+                android:layout_width="@dimen/s_0.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/duobao_layout_offTheStocksTvWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/offTheStocks"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_15sp" />
+
+                <View
+                    android:id="@+id/duobao_v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/s_8dp"
+                    android:gravity="bottom" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/duobao_layout_viewpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/duobao_layout_frag_btn" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

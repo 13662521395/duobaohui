@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/share_show_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingTop="@dimen/s_10dp">
+
+    <com.shinc.duobaohui.customview.imp.CircleImageView
+        android:id="@+id/share_show_item_headimg"
+        android:layout_width="@dimen/s_60dp"
+        android:layout_height="@dimen/s_60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:src="@drawable/icon_head_small"
+       />
+
+    <LinearLayout
+        android:id="@+id/share_show_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_marginRight="@dimen/s_10dp"
+        android:layout_toRightOf="@+id/share_show_item_headimg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/s_10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginTop="@dimen/s_5dp">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/share_show_item_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:text="张三"
+                android:textColor="@color/c_00b7ee"
+                android:textSize="@dimen/s_15dp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/share_user_ip_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/share_show_item_username"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/c_afafaf"
+                android:textSize="@dimen/s_12dp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/share_show_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/s_3dp"
+                android:text="09-21 21:33"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/s_12dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_5dp"
+            android:background="@drawable/back_show_dialogbox"
+            android:orientation="vertical"
+            android:padding="@dimen/s_10dp">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/share_show_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_10dp"
+                android:text="我真的中奖了～～～"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/s_15dp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/share_show_item_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_10dp"
+                android:layout_marginTop="@dimen/s_10dp"
+                android:text="（第二期）德玛西亚iphone6s"
+                android:textColor="@color/c_afafaf"
+                android:textSize="@dimen/s_15dp" />
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/share_show_item_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_10dp"
+                android:layout_marginTop="@dimen/s_10dp"
+                android:text="凡事贵在坚持；继续夺宝中；希望在中一个6s,也希望身边的朋友们多多中奖"
+                android:textColor="@color/gray_9"
+                android:textSize="@dimen/s_14dp" />
+
+            <LinearLayout
+                android:id="@+id/share_show_item_imgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/share_show_item_img1"
+                    android:layout_width="@dimen/s_75dp"
+                    android:layout_height="@dimen/s_75dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp" />
+
+                <ImageView
+                    android:id="@+id/share_show_item_img2"
+                    android:layout_width="@dimen/s_75dp"
+                    android:layout_height="@dimen/s_75dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp" />
+
+                <ImageView
+                    android:id="@+id/share_show_item_img3"
+                    android:layout_width="@dimen/s_75dp"
+                    android:layout_height="@dimen/s_75dp"
+                    android:layout_marginLeft="@dimen/s_10dp"
+                    android:layout_marginTop="@dimen/s_10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/share_show_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_0.5dp"
+        android:layout_below="@+id/share_show_item_ll"
+        android:background="@color/c_efefef" />
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/target_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sign_three" />
+
+        <TextView
+            android:id="@+id/guide_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/target_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/s_5dp"
+            android:gravity="center"
+            android:text="登陆后签到可以领红包哦~"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s_13dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/guide_text"
+            android:layout_marginTop="@dimen/s_20dp">
+
+            <TextView
+                android:id="@+id/cancel_act"
+                style="@style/white_btn_style"
+                android:layout_width="@dimen/s_110dp"
+                android:layout_height="@dimen/s_35dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="朕知道了" />
+
+            <TextView
+                android:id="@+id/confirm_act"
+                style="@style/red_btn_style"
+                android:layout_width="@dimen/s_110dp"
+                android:layout_height="@dimen/s_35dp"
+                android:gravity="center"
+                android:text="立即登录" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

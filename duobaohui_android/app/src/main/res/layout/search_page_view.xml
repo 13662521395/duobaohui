@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_e4e4e4">
+
+    <ScrollView
+        android:id="@+id/search_history_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/hot_search_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/s_25dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/s_10dp"
+                    android:text="热门搜索"
+                    android:textSize="@dimen/s_14dp" />
+
+                <com.shinc.duobaohui.customview.imp.ReGridView
+                    android:id="@+id/hot_search_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="@dimen/s_5dp"
+                    android:listSelector="@android:color/transparent"
+                    android:verticalSpacing="@dimen/s_5dp"
+                    android:numColumns="auto_fit"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_history_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hot_search_ll"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/s_31dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/s_10dp"
+                    android:text="历史搜索"
+                    android:textColor="@color/c_afafaf"
+                    android:textSize="@dimen/s_12dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_0.5dp"
+                    android:background="@color/c_e4e4e4" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <com.shinc.duobaohui.customview.imp.ReListView
+                        android:id="@+id/search_history_grid_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:dividerHeight="@dimen/s_0.5dp"
+                        android:footerDividersEnabled="true"
+                        android:headerDividersEnabled="true"
+                        android:listSelector="@drawable/grid_item1_selector"
+                        android:scrollbars="none" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_0.5dp"
+                    android:background="@color/c_e4e4e4" />
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/s_5dp"
+                android:layout_below="@id/search_history_ll" />
+
+            <RelativeLayout
+                android:id="@+id/clear_search_history_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/s_55dp"
+                android:layout_below="@id/line_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/s_20dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/s_0.5dp"
+                    android:background="@color/c_e4e4e4" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/clean_search_tv"
+                    android:layout_width="@dimen/s_100dp"
+                    android:layout_height="@dimen/s_30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/red_btn_selector"
+                    android:gravity="center"
+                    android:text="清除搜索记录"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/s_12sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/s_0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/c_e4e4e4" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/search_result_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <com.shinc.duobaohui.customview.imp.ReListView
+            android:id="@+id/search_result"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:listSelector="@drawable/grid_item1_selector"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/white_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/s_30dp">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/s_20dp"
+        android:text="“请确认已收到奖品，否则可能会竹篮打水哦”"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_15sp" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/winner_dialog_stay_layout_button"
+        style="@style/red_btn_style"
+        android:layout_width="@dimen/s_120dp"
+        android:layout_height="@dimen/s_35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/s_15dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/s_10dp"
+        android:paddingRight="@dimen/s_10dp"
+        android:text="确认收货"></com.shinc.duobaohui.customview.imp.CustomTextView>
+
+</LinearLayout>

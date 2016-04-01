@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_36dp"
+        android:layout_centerVertical="true"
+        android:drawablePadding="@dimen/s_5dp"
+        android:hint="上班族都在用什么"
+        android:paddingLeft="@dimen/s_10dp" />
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <!--<View-->
+    <!--android:id="@+id/target_layout"-->
+    <!--android:layout_width="@dimen/s_90dp"-->
+    <!--android:layout_height="@dimen/s_51dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"/>-->
+
+    <ImageView
+        android:id="@+id/guide_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/s_10dp"
+        android:src="@drawable/sign_two" />
+
+</RelativeLayout>

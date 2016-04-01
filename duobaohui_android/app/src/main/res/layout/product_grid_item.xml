@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/s_208dp"
+    android:background="@color/white">
+    <View
+        android:id="@+id/center_line"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/s_208dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/c_efefef"/>
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_110dp"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_marginRight="@dimen/s_10dp"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:layout_toLeftOf="@id/center_line"
+        android:src="@drawable/pic_listnopic" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_82dp"
+        android:layout_toLeftOf="@id/center_line"
+        android:layout_below="@id/product_img">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_20dp"
+            android:layout_marginTop="@dimen/s_5dp"
+            android:lines="2"
+            android:text="Apple iPhone6 4.7英寸64G 土豪金"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/product_name"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginRight="@dimen/s_10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/s_3dp"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/product_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="开奖进度 88%"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/s_12dp" />
+
+                <ProgressBar
+                    android:id="@+id/active_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/s_3dp"
+                    android:layout_marginRight="@dimen/s_5dp"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_style" />
+            </LinearLayout>
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/goto_current"
+                style="@style/duobao_bg_selector"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/s_25dp"
+                android:layout_marginBottom="@dimen/s_8dp"
+                android:layout_marginTop="@dimen/s_8dp"
+                android:layout_weight="0.35"
+                android:gravity="center"
+                android:text="1元夺宝"
+                android:textSize="@dimen/s_12dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/alpha_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_208dp"
+        android:background="@color/c_600000"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

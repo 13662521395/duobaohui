@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/computational_details_item_layout_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/s_10dp"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:layout_weight="0.5"
+        android:gravity="left|center_vertical"
+        android:text="2015-09-18 12:30:48.283"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_13sp" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/computational_details_item_layout_lunckCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/s_10dp"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:layout_weight="0.25"
+        android:drawableLeft="@drawable/icon_details_more"
+        android:gravity="center"
+        android:text="123048283"
+        android:textColor="@color/c_ff5a5a"
+
+        android:textSize="@dimen/s_13sp" />
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/computational_details_item_layout_NickName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/s_10dp"
+        android:layout_marginLeft="@dimen/s_10dp"
+        android:layout_marginTop="@dimen/s_10dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:text="我们去夺宝"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/s_13sp" />
+
+
+</LinearLayout>

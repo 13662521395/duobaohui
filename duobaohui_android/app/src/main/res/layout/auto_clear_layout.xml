@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_30dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/search_edit_bg"
+        android:drawableLeft="@drawable/icon_search"
+        android:gravity="center_vertical"
+        android:hint=" 搜索"
+        android:imeOptions="actionSearch"
+        android:paddingRight="@dimen/s_8dp"
+        android:singleLine="true"
+        android:textSize="@dimen/s_13dp" />
+
+    <ImageView
+        android:id="@+id/icon_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/s_3dp"
+        android:src="@drawable/btn_delinput"
+        android:visibility="gone" />
+
+</RelativeLayout>

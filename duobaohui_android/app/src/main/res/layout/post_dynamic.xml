@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/container_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/post_edit_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_75dp"
+        android:orientation="vertical">
+
+
+        <HorizontalScrollView
+            android:id="@+id/post_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/post_pic_container"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/s_75dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <com.shinc.duobaohui.utils.icon.widget.FilterImageView
+                    android:id="@+id/post_add_pic"
+                    android:layout_width="@dimen/s_55dp"
+                    android:layout_height="@dimen/s_55dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_upload" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/post_pic_remain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="right|center_vertical"
+            android:paddingBottom="@dimen/padding_5"
+            android:paddingRight="@dimen/padding_10"
+            android:text="0/9"
+            android:textColor="@color/gray_9"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dividing_line_width_height"
+            android:background="@color/mine_dividing_line_color" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/pagerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.shinc.duobaohui.utils.icon.widget.AlbumViewPager
+            android:id="@+id/albumviewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/album_item_bg" />
+
+        <include
+            android:id="@+id/album_item_header_bar"
+            layout="@layout/album_item_header_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" />
+    </FrameLayout>
+
+</LinearLayout>

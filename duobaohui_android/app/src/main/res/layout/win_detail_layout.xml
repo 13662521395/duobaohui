@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/win_detail_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/win_recrod_layout_back"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="fill_parent"
+            android:focusable="false"
+            android:padding="@dimen/s_15dp"
+            android:src="@drawable/icon_back"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="中奖详情"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/s_18dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/s_0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e4e4e4" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/win_detail_layout_title"
+        android:scrollbarSize="@dimen/s_4dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbarTrackVertical="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/s_10dp">
+
+                <ImageView
+                    android:id="@+id/win_detail_layout_imgZXZJ"
+                    android:layout_width="@dimen/s_21dp"
+                    android:layout_height="@dimen/s_21dp"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:src="@drawable/icon_h" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:layout_toRightOf="@+id/win_detail_layout_imgZXZJ"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/s_1dp"
+                    android:text="恭喜,中奖啦！" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/s_1dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line_0"
+                android:layout_width="@dimen/s_2dp"
+                android:layout_height="@dimen/s_45dp"
+                android:layout_marginLeft="@dimen/s_25dp"
+                android:background="@color/c_afafaf" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/win_detail_layout_ImgExpiryDate"
+                    android:layout_width="@dimen/s_21dp"
+                    android:layout_height="@dimen/s_21dp"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:src="@drawable/icon_h" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvWrodExpiryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:layout_toRightOf="@+id/win_detail_layout_ImgExpiryDate"
+                    android:gravity="center"
+                    android:text="@string/expiryDate" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvWrodExpiryDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:gravity="center"
+                    android:text="@string/expiryDateTime"
+                    android:textColor="@color/c_666666" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view_line_v1"
+                    android:layout_width="@dimen/s_2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/s_25dp"
+                    android:background="@color/c_afafaf"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/view_line_v11"
+                    android:layout_width="@dimen/s_2dp"
+                    android:layout_height="@dimen/s_45dp"
+                    android:layout_marginLeft="@dimen/s_25dp"
+                    android:background="@color/c_afafaf"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/win_detail_layout_layoutAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_35dp">
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_addressDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/s_3dp"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:textColor="@color/c_afafaf" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_addressNamePhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/win_detail_layout_addressDetail"
+                        android:layout_marginLeft="@dimen/s_3dp"
+                        android:layout_marginTop="@dimen/s_5dp"
+                        android:textColor="@color/c_afafaf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/win_detail_layout_addressNamePhone"
+                        android:layout_marginBottom="@dimen/s_10dp"
+                        android:layout_marginRight="@dimen/s_20dp"
+                        android:layout_marginTop="@dimen/s_10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.shinc.duobaohui.customview.imp.CustomTextView
+                            android:id="@+id/win_detail_layout_btnOkAddressDefualt"
+                            style="@style/red_btn_style"
+                            android:layout_width="@dimen/s_1dp"
+                            android:layout_height="@dimen/s_30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/s_10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/choiceAddressDefualt" />
+
+                        <com.shinc.duobaohui.customview.imp.CustomTextView
+                            android:id="@+id/win_detail_layout_btnOkAddressOuthor"
+                            style="@style/red_btn_style"
+                            android:layout_width="@dimen/s_1dp"
+                            android:layout_height="@dimen/s_30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/s_10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/win_detail_addressOK"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/win_detail_layout_ImgSendThrPize"
+                    android:layout_width="@dimen/s_21dp"
+                    android:layout_height="@dimen/s_21dp"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:src="@drawable/icon_h" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_TvSendThrPize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:layout_toRightOf="@+id/win_detail_layout_ImgSendThrPize"
+                    android:gravity="center"
+                    android:text="@string/sendThePrize" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_TvSendThrPizeTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:gravity="center"
+                    android:textColor="@color/c_666666" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/win_detail_layout_SendParizelayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s_45dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view_line_v2"
+                    android:layout_width="@dimen/s_2dp"
+                    android:layout_height="@dimen/s_45dp"
+                    android:layout_marginLeft="@dimen/s_25dp"
+                    android:background="@color/c_afafaf" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvInfo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_45dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:text="我们正在向您派奖，请耐心等待"
+                    android:textColor="@color/c_afafaf" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/win_detail_layout_GoodToBeReceived"
+                    android:layout_width="@dimen/s_21dp"
+                    android:layout_height="@dimen/s_21dp"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:src="@drawable/icon_h" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvGoodToBeReceived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:layout_toRightOf="@+id/win_detail_layout_GoodToBeReceived"
+                    android:gravity="center"
+                    android:text="@string/goodToBeReceived" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvGoodToBeReceivedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:gravity="center"
+                    android:textColor="@color/c_666666" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view_line_v3"
+                    android:layout_width="@dimen/s_2dp"
+                    android:layout_height="@dimen/s_45dp"
+                    android:layout_marginLeft="@dimen/s_25dp"
+                    android:background="@color/c_afafaf"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view_line_v33"
+                    android:layout_width="@dimen/s_2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/s_25dp"
+                    android:background="@color/c_afafaf" />
+
+                <RelativeLayout
+                    android:id="@+id/win_detail_layout_GoodsReceived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/s_5dp"
+                    android:layout_marginLeft="@dimen/s_40dp"
+                    android:layout_marginTop="@dimen/s_5dp">
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_tvGoodToBeReceivedInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/s_10dp"
+                        android:textColor="@color/c_afafaf"
+                        android:textSize="@dimen/s_15sp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_btnGoodToBeReceivedInfo"
+                        style="@style/red_btn_style"
+                        android:layout_width="@dimen/s_100dp"
+                        android:layout_height="@dimen/s_30dp"
+                        android:layout_below="@+id/win_detail_layout_tvGoodToBeReceivedInfo"
+                        android:gravity="center"
+                        android:text="@string/confirmGoodToBeReceived" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/s_10dp">
+
+                <ImageView
+                    android:id="@+id/win_detail_layout_Completed"
+                    android:layout_width="@dimen/s_21dp"
+                    android:layout_height="@dimen/s_21dp"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:src="@drawable/icon_h" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_CompletedShowOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:layout_toRightOf="@+id/win_detail_layout_Completed"
+                    android:gravity="center"
+                    android:text="@string/completedShowOeder" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_CompletedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:gravity="center"
+                    android:textColor="@color/c_666666" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_btnCompletedTime"
+                    style="@style/red_btn_style"
+                    android:layout_width="@dimen/s_80dp"
+                    android:layout_height="@dimen/s_30dp"
+                    android:layout_below="@+id/win_detail_layout_CompletedShowOrder"
+                    android:layout_marginLeft="@dimen/s_70dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:gravity="center"
+                    android:text="@string/goCompletedTime"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/win_detail_layout_LogisticsInformationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/s_10dp"
+                android:visibility="gone">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_LogisticsInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_efefef"
+                    android:padding="@dimen/s_15dp"
+                    android:text="@string/logistcsInformation" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_LogisticsInformationValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_20dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:textColor="@color/c_afafaf" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_LogisticsInformationCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_20dp"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:textColor="@color/c_afafaf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/win_detail_layout_tvAddressInfomationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/s_10dp"
+                android:visibility="gone">
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvAddressInfomation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_efefef"
+                    android:padding="@dimen/s_15dp"
+                    android:text="@string/addressInfomation" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvAddressInfomationValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_20dp"
+                    android:layout_marginTop="@dimen/s_10dp"
+                    android:textColor="@color/c_afafaf" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/win_detail_layout_tvAddressNameValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_20dp"
+                    android:layout_marginTop="@dimen/s_5dp"
+                    android:textColor="@color/c_afafaf" />
+            </LinearLayout>
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_efefef"
+                android:padding="@dimen/s_15dp"
+                android:text="奖品详情" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/s_10dp"
+                android:layout_marginLeft="@dimen/s_2dp"
+                android:layout_marginTop="@dimen/s_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/win_detail_layout_img"
+                    android:layout_width="@dimen/s_90dp"
+                    android:layout_height="@dimen/s_90dp"
+                    android:layout_marginLeft="@dimen/s_15dp"
+                    android:layout_marginRight="@dimen/s_10dp"
+                    android:src="@drawable/icon_nopic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/s_40dp"
+                        android:maxLines="2"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_15sp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_total_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_15sp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_period_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_15sp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_luncky_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_15sp" />
+
+                    <com.shinc.duobaohui.customview.imp.CustomTextView
+                        android:id="@+id/win_detail_layout_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_666666"
+                        android:textSize="@dimen/s_15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.shinc.duobaohui.customview.imp.WaitLoading
+        android:id="@+id/wait_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/win_detail_layout_title"
+        android:background="@color/fff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/no_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/win_detail_layout_title"
+        android:background="@color/c_efefef"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/s_150dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_noweb" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/recharge_layout_layout_noData"
+        layout="@layout/no_data_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/win_detail_layout_title" />
+</RelativeLayout>

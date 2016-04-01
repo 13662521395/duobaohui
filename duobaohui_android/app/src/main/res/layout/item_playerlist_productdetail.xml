@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/s_50dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <View
+            android:layout_width="@dimen/s_0.5dp"
+            android:layout_height="@dimen/s_5dp"
+            android:layout_marginLeft="@dimen/s_30dp"
+            android:background="@color/c_e4e4e4" />
+
+        <com.shinc.duobaohui.customview.imp.CircleImageView
+            android:id="@+id/head_im_productdetail"
+            android:layout_width="@dimen/s_40dp"
+            android:layout_height="@dimen/s_40dp"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_marginTop="@dimen/s_5dp"
+            android:src="@drawable/icon_head_small" />
+
+        <View
+            android:layout_width="@dimen/s_0.5dp"
+            android:layout_height="@dimen/s_5dp"
+            android:layout_below="@+id/head_im_productdetail"
+            android:layout_marginLeft="@dimen/s_30dp"
+            android:background="@color/c_e4e4e4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/s_10dp"
+            android:layout_toRightOf="@+id/head_im_productdetail"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/take_part_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="沉默的小绵羊"
+                    android:textColor="@color/c_00b7ee"
+                    android:textSize="@dimen/s_13dp" />
+
+                <TextView
+                    android:id="@+id/ip_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/c_afafaf"
+                    android:textSize="@dimen/s_13dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/take_part_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="参与了1人次"
+                    android:textSize="@dimen/s_13dp" />
+
+                <com.shinc.duobaohui.customview.imp.CustomTextView
+                    android:id="@+id/create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/s_5dp"
+                    android:text=""
+                    android:textColor="@color/c_afafaf" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

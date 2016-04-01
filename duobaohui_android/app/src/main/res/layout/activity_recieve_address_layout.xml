@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_recieve_address"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/s_50dp"
+    android:layout_marginTop="@dimen/s_10dp"
+    android:background="#ffffff"
+    android:gravity="center_vertical">
+
+    <com.shinc.duobaohui.customview.imp.CustomTextView
+        android:id="@+id/activity_recicve_address_layout_btn"
+        style="@style/red_btn_style"
+        android:layout_width="@dimen/s_160dp"
+        android:layout_height="@dimen/s_35dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/s_15dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/s_16dp" />
+
+</RelativeLayout>

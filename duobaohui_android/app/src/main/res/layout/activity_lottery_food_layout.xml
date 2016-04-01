@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cube_ptr="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_efefef">
+
+    <RelativeLayout
+        android:id="@+id/deprive_precious_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/c_ff5a5a">
+
+        <ImageView
+            android:id="@+id/open_drawer_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/s_10dp"
+            android:src="@drawable/icon_classify"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/search_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/s_10dp"
+            android:src="@drawable/btn_search"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/login_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxHeight="@dimen/s_48dp"
+            android:src="@drawable/icon_appwords" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/product_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_40dp"
+        android:layout_below="@id/deprive_precious_title"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/main_mood_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="人气"
+            android:textColor="@color/c_5f5f5f"
+            android:textSize="@dimen/s_14dp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/main_lastest_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最新"
+            android:textColor="@color/c_5f5f5f"
+            android:textSize="@dimen/s_14dp" />
+
+        <com.shinc.duobaohui.customview.imp.CustomTextView
+            android:id="@+id/main_progress_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="进度"
+            android:textColor="@color/c_5f5f5f"
+            android:textSize="@dimen/s_14dp" />
+
+        <RelativeLayout
+            android:id="@+id/main_product_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.shinc.duobaohui.customview.imp.CustomTextView
+                android:id="@+id/main_product_need_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="总需人数"
+                android:textColor="@color/c_5f5f5f"
+                android:textSize="@dimen/s_14dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/s_2dp"
+                android:layout_toRightOf="@id/main_product_need_num"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/main_icon_arrow_up"
+                    android:layout_width="@dimen/s_6dp"
+                    android:layout_height="@dimen/s_6dp"
+                    android:src="@drawable/icon_up" />
+
+                <ImageView
+                    android:id="@+id/main_icon_arrow_down"
+                    android:layout_width="@dimen/s_6dp"
+                    android:layout_height="@dimen/s_6dp"
+                    android:layout_below="@id/main_icon_arrow_up"
+                    android:src="@drawable/icon_down" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.shinc.duobaohui.customview.ptr.PtrClassicFrameLayout
+        android:id="@+id/pull_to_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/product_main_title"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <com.shinc.duobaohui.customview.imp.LoadMoreListView
+            android:id="@+id/product_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/c_efefef"
+            android:dividerHeight="0.5dp"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="false"
+            android:listSelector="@drawable/grid_item1_selector"
+            android:overScrollMode="never"
+            android:scrollbarSize="@dimen/s_4dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@android:color/transparent" />
+    </com.shinc.duobaohui.customview.ptr.PtrClassicFrameLayout>
+
+    <com.shinc.duobaohui.customview.imp.WaitLoading
+        android:id="@+id/wait_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/deprive_precious_title"
+        android:background="@color/fff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/no_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/deprive_precious_title"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/s_150dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_noweb" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_0.5dp"
+        android:layout_below="@+id/product_main_title"
+        android:background="#efefef" />
+</RelativeLayout>
+
