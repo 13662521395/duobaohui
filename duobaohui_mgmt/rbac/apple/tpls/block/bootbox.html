@@ -1,0 +1,13 @@
+
+<script src="/ace/assets/js/bootbox.min.js"></script>
+<script>
+				$(".dialog").on('click', function() {
+					bootbox.prompt("What is your name?", function(result) {
+						if (result === null) {
+							Example.show("Prompt dismissed");
+						} else {
+							Example.show("Hi <b>"+result+"</b>");
+						}
+					});
+				});
+</script>

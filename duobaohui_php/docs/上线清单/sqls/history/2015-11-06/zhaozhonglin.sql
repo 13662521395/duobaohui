@@ -1,0 +1,1 @@
+update sh_user set  status = 1 where is_real=0;

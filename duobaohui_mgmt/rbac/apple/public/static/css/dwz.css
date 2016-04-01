@@ -1,0 +1,70 @@
+.select{float:left;margin:0 10px 0 10px;}
+h2{float:left;line-height:17px;}
+.shuoming{
+	background:#6CA6CD;
+	width:15px;
+	height:15px;
+	float:left;
+	margin-left:50px;
+}
+.shuoming_two{
+	background:#76EE00;
+	float:left;
+}
+.shuoming_three{
+	background:#CD3333;
+	float:left;
+}
+.info{float:left;margin:0 10px 0 10px;}
+.box{
+	border:1px solid #E8E8E8;
+	height:350px;
+	margin:10px 20px 0 20px;
+}
+
+.title{
+	color:#FFB90F;
+	height:40px;
+	height:30px;
+	line-height:30px;
+	background:#4D4D4D;
+	padding-left:20px;
+}
+.indexTable{
+	text-align:center;
+}
+.indexTable  tr{
+	padding:10px 0 10px 0;
+	height:30px;
+	font-size:30px;
+}
+
+.indexTable  tr td{
+	border:1px solid #EEE;
+	border-left:medium none;
+	border-right:medium none;
+	border-top:medium none;
+}
+.indexTable .today{color:#EE0000;}
+.indexTable tr:hover {
+	background:#EE7621;
+	color:#F0F0F0;
+}
+.indexTable .th:hover {
+	background:#5B5B5B;
+}
+.indexPieTable  tr{
+	height:31px;
+}
+.indexTable .th{
+	background:#ccc;
+	background:#5B5B5B;
+}
+.indexTable th{
+	color:#FFF;
+}
+.grey{color:#A3A3A3;}
+.appBox{height:250px;}
+.box_left{width:49%;height:372px;overflow:hidden;float:left;border:1px solid #ccc;margin:2px;}
+.box_right{width:49%;height:372px;overflow:hidden;float:left;border:1px solid #ccc;margin:2px;}
+.pieBox{height:378px;}

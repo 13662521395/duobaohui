@@ -1,0 +1,103 @@
+
+		<script src="http://localhost.rbac/ace/assets/js/jquery.validate.min.js"></script>
+		<script src="http://localhost.rbac/ace/assets/js/jquery.plugin.min.js"></script>
+
+		<script src="http://localhost.rbac/ace/assets/js/jquery.timer.min.js"></script>
+		<script>
+// 在使用页面定义 如下参数
+/*
+var vform = {
+	id: '#form-id',
+	rules: {
+		name: {
+			required: true
+		}
+	},
+	messages: {
+		name: {
+			required: "请填写名称."
+		}
+	}
+			
+};
+ */
+				// alert
+				if($(vform.id).find('.alert').length==0){
+					var alertHtml	= '<div class="alert alert-danger" style="display:none"><i class="icon-remove"></i><span></span></div>';
+					alertHtml		+= '<div class="alert alert-success" style="display:none"><i class="icon-ok"></i><span></span></div>';
+					$(vform.id).prepend(alertHtml);
+				}
+
+				$(vform.id).validate({
+					errorElement: 'div',
+					errorClass: 'help-block',
+					focusInvalid: false,
+					rules: vform.rules,
+					messages: vform.messages,
+			
+					invalidHandler: function (event, validator) { //display error alert on form submit   
+						$('.alert-danger', $('.login-form')).show();
+					},
+			
+					highlight: function (e) {
+						$(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+					},
+			
+					success: function (e) {
+						$(e).closest('.form-group').removeClass('has-error').addClass('has-info');
+						$(e).remove();
+					},
+			
+					errorPlacement: function (error, element) {
+						if(element.is(':checkbox') || element.is(':radio')) {
+							var controls = element.closest('div[class*="col-"]');
+							if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
+							else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+						}
+						else if(element.is('.select2')) {
+							error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+						}
+						else if(element.is('.chosen-select')) {
+							error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+						}
+						else error.insertAfter(element.parent());
+					},
+			
+					submitHandler: function (form) {
+						//form.submit();
+						// ajax 方式:
+
+							var form = $(vform.id);
+							$.ajax({
+								url:form.attr('action'),
+								type:form.attr('method'),
+								data:form.serialize(),
+								dataType:"json",
+								success:function(data){
+									if(!data.status){
+										$('.alert-danger span').html(data.message);
+										$('.alert-danger').show(300);
+										$('.alert-success').hide(300);
+									}else{
+										$('.alert-success span').html(data.message);
+										$('.alert-success').show(300);
+										$('.alert-danger').hide(300);
+
+										if(typeof(vform.redirect)!='undefined'){ // 跳转其他页面
+											$("body").timer({ // 定时器，直接用locating有兼容问题
+												callback: function() { location.href=vform.redirect; 
+												}
+											});
+										}
+										if(typeof(vform.refresh)!='undefined' && vform.refresh){ // 刷新本页面
+											$("body").timer({ // 定时器，直接用locating有兼容问题
+												callback: function() { location.reload(); }
+											});
+										}
+									}
+								}
+							});
+					}
+
+				});
+		</script>

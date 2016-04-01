@@ -1,0 +1,21 @@
+CREATE TABLE `sh_jnl_weixin` (
+	  `transaction_id` varchar(64) NOT NULL COMMENT '微信支付订单号',
+	  `out_trade_no` varchar(64) NOT NULL DEFAULT '' COMMENT '商户网站唯一订单号',
+	  `total_fee` int(16) NOT NULL COMMENT '总金额',
+	  `nonce_str` varchar(32) NOT NULL COMMENT '随机字符串',
+	  `sign` varchar(32) NOT NULL COMMENT '签名',
+	  `create_time` datetime NOT NULL COMMENT '交易起始时间',
+	  `time_expire` datetime NOT NULL COMMENT '交易结束时间',
+	  `time_end` varchar(14) NOT NULL COMMENT '交易完成时间',
+	  `is_subscribe` varchar(1) NOT NULL DEFAULT 'N' COMMENT '是否关注公众账号',
+	  `trade_type` varchar(16) NOT NULL DEFAULT 'APP' COMMENT '交易类型',
+	  `bank_type` varchar(16) NOT NULL DEFAULT 'CFT' COMMENT '付款银行',
+	  `fee_type` varchar(8) NOT NULL DEFAULT 'CNY' COMMENT '货币种类',
+	  `cash_fee` int(16) NOT NULL DEFAULT '0' COMMENT '现金支付金额',
+	  `appid` varchar(32) NOT NULL COMMENT '公众账号ID',
+	  `mch_id` varchar(32) NOT NULL COMMENT '商户号',
+	  `openid` varchar(32) NOT NULL COMMENT '用户标识',
+	  `return_code` varchar(10) NOT NULL COMMENT '返回结果',
+	  PRIMARY KEY (`transaction_id`),
+	  KEY `sh_jnl_weixin_outtradeno` (`out_trade_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微信支付订单表';

@@ -1,0 +1,9 @@
+.svn
+cmd
+jserver
+config
+baidu_wantu
+.swp
+*~
+config.php
+db.php

@@ -1,0 +1,94 @@
+1. 工程师lab上相关功能测试
+2. 每次数据表操作，统一由专人负责上线， 必须需先备份相关表结构及数据，且确认备份成功。
+3. 提交需求方，需求方确认可以上线
+4. 执行上线脚本
+5. 执行自动检测脚本
+
+
+【上线脚本】：
+    1. 整站上 线
+        sudo sh /alidata/www/bin/online_guang.sh
+
+    2. 某个文件夹上线
+        /alidata/www/bin/online_dir/guang.sh 源文件 目的地址
+
+    3. 单个文件上线   
+        /alidata/www/bin/online_file/guang.sh 源文件 目的地址
+
+    4. 如何版本回滚
+        /alidata/www/bin/rollback.sh
+            执行结果回退至倒数第二次的线上代码
+
+
+
+ 
+
+------------------------------------------------------- --------------------------- --------------------------- ---------------------------
+                 上线脚本详解
+一 ： guang.hitao.com 上线
+整站上线  
+   (1) sudo sh /alidata/www/bin/online_guang.sh  执行上线命令
+　（2）执行过程  
+       1：创建备份文件夹
+  2：导出代码使用rsync导出 admini gate phplib libs seo，同时过滤 .svn 文件，
+  3：文件搬家，为避免文件太大，可能造成的跨扇区搬家这类的情况，会创建俩个临时文件夹，一个存rsync导出的代码，一个存线上代码mv出的代码
+4：node重启，因为node重启的过程会相对比较耗时，若此时发现 js css 无法加载，可能原因是在重启node的过程中，node监督程序发现node服务为启动，它也重启了node，所以现在有多个node服务，需手动杀死其中的一个，或杀死全部，然后重启
+sudo killall node
+sudo /alidata/www/guang.hitao.com/cmd/service2.sh start   
+
+2. 某个文件夹上线
+  执行 /alidata/www/bin/online_dir/guang.sh 源文件 目的地址
+3. 单个文件上线   
+执行 /alidata/www/bin/online_file/guang.sh 源文件 目的地址
+4. 如何版本回滚
+        执行 /alidata/www/bin/rollback.sh
+            执行结果回退至倒数第二次的线上代码，已考虑切换的速度
+
+二 ： mei.hitao.com 上线
+整站上线  
+   (1) sudo php /alidata/www/bin/onling_mei.php  执行上线命令
+　（2）执行过程  
+           1：rsync导出代码，过滤svn
+  2: 修改nginx root指向
+           3：nginx -s reload
+
+2. 某个文件夹上线
+      执行 /alidata/www/bin/online_dir/mei.sh 源文件 目的地址
+3. 单个文件上线   
+        执行 /alidata/www/bin/online_file/mei.sh 源文件 目的地址
+4 如何版本回滚
+         修改nginx  的root配置,重启nginx -s reload
+
+
+三: 单个文件上线
+       可以执行  mv src dst
+四： 单独上线某个文件夹可按照以下步骤
+
+        例如 上线   /alidata/www/lab/guang.hitao.com/admini/view
+            rsync -varl --exclude=".svn" /alidata/www/lab/guang.hitao.com/admini/view tmp
+            mv tmp/*   /alidata/www/guang.hitao.com/admini/view
+
+
+五 : 关于回退 
+       若回退的版本然让不正确，在/alidata/www/guang/2014 下有今年各个时期的本版，具体参考目录名称，进入该日期为目录名的目录，执行  sudo cp -rf guang.hitao.com/* /alidata/www/guang.hitao.com，就可回退到想要的本版
+六 ：guang.hitao.com 上线结果检查脚本
+     php /home/wangxu/script/check_seo.php
+     sh /home/wangxu/script/check_seo.sh 
+     结果请参考输出
+七：请定时的执行 rm-r /alidata/www/guang_tmp*
+       删除它是因为空文件夹太多，不好看。
+八：sitemap上线(已加入crontab)
+   执行脚本 
+ sh /alidata/www/lab/guang.hitao.com/gate/scripts/sitemap/create_sitemap/update_sitemap.sh
+
+执行过程
+1：读取数据库生成 sitemap_goods*.xml
+2：压缩 sitemap_goods*.xml为gz格式
+
+3：重写
+/alidata/www/lab/guang.hitao.com/gate/public.sitemap/sitemap.xml
+4：复制 （俩次） 
+copy -r php /alidata/www/lab/guang.hitao.com/gate/scripts/sitemap/create_sitemap/urlooc/*  /alidata/www/lab/guang.hitao.com/gate/public/sitemap/
+copy -r php /alidata/www/lab/guang.hitao.com/gate/scripts/sitemap/create_sitemap/urlooc/*  
+
+ /alidata/www/lab/guang.hitao.com/gate/public/seo/sitemap/

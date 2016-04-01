@@ -1,0 +1,33 @@
+<script>
+$(function(){ 
+	$(".readonly").click( 
+		function(){ 
+			this.checked = !this.checked; 
+		} 
+	); 
+
+	$('#form_submit').click(function (){
+		var form = $('#validation-form');
+		$.ajax({
+			url:form.attr('action'),
+			type:form.attr('method'),
+			data:form.serialize(),
+			dataType:"json",
+			success:function(data){
+				if(data.status){
+					$('.alert-success').hide(300); 
+					$('.alert-success').show(300);
+					$('.alert-danger').hide(300);
+					$('.alert-success span').html(data.message);
+				}else{
+					$('.alert-danger').hide(300); 
+					$('.alert-danger').show(300);
+					$('.alert-success').hide(300);
+					$('.alert-danger span').html(data.message || data);
+				}
+			}
+		});
+	});
+
+}); 
+</script>

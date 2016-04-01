@@ -1,0 +1,12 @@
+body {TEXT-ALIGN: center;width:100%;height:100%;background-color: #f7f7f7; margin: 0;padding: 0;}
+div.main{ width: 100%; height: 100%;  background-color: #f7f7f7; }
+.top,.middle,.money,.other-pay{width:90%; height: auto; margin: 20px auto;}
+.top{height: auto; color: #fe5a59; margin-top: 20px;}
+.middle{background-color: #ffffff; width: 100%; margin-top: 20px;}
+.money-res{ color: #fe5a59; text-align: right; font-size: 16px; margin-top: 5px;}
+.money-label{ font-size: 18px; }
+.money{margin-top:20px;}
+.other-pay{text-align: left}
+.btn-confirm{background-color: #fe5a59;border-color: #fe5a59; width: 90%;}
+hr { margin-top: 10px; margin-bottom: 10px; border: 0; border-top: 1px solid #cccccc; }
+.table-detail{color:gray;}

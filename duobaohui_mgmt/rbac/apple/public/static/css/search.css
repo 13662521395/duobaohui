@@ -1,0 +1,21 @@
+.searchInput{
+	float:left;
+	margin-right:20px;
+}
+.bg_th{
+	background:url("/static/images/grid/grid.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height:21px;
+	line-height:16px;
+	overflow:hidden;
+	display:block;
+	float:left;
+	padding-left:20px;
+	margin-top:3px;	
+}
+.integral >li , .integral ,.o_area{
+	float:left;
+}
+.o_area{
+	padding-top:3px;
+	margin-right:5px;
+}

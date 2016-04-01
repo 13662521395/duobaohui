@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+html, body {position: relative;margin: 0;padding: 0;width: 100%;min-width:1200px;font-size: 14px;font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";user-select: none;-webkit-user-select: none;-moz-user-select: none;}
+img {display: block;}
+a {text-decoration: none;}
+
+.dbh-header {width: 100%;background-color: #fff;}
+.dbh-body {width: 100%;background: url("../image/bg.jpg") no-repeat center;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;}
+.dbh-partner {height: 150px;background-color: rgb(249,250,252);}
+.dbh-footer {width: 100%;background-color: rgb(57,70,78);}
+
+.dbh-header > div.dbh-title,
+.dbh-body > div.dbh-content,
+.dbh-footer > div.dbh-info {width: 1200px;margin: 0 auto;}
+
+/* dbh-header */
+.dbh-header > div.dbh-title {padding: 4px 0;}
+.dbh-header > div.dbh-title img {width: auto;height: 42px;margin: 0 40px;}
+
+/* dbh-content */
+.dbh-body > div.dbh-content {height: 800px;}
+.dbh-body > div.dbh-content > div.dbh-content-download,
+.dbh-body > div.dbh-content > div.dbh-content-tel {position: relative;}
+.dbh-body > div.dbh-content > div.dbh-content-download {width: 100%;height: 80%;}
+.dbh-body > div.dbh-content > div.dbh-content-tel {width: 100%;height: 20%;}
+
+/* dbh-content-download */
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-phone {position: absolute;bottom: 0;left: 0;width: 40%;}
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-logo,
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-download {position: absolute;right: 40px;width: 55%;}
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-logo {top: 50px;}
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-download {bottom: 30px;}
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-line {position: absolute;bottom: 0;width: 100%;height: 2px;background-color: #fff;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;}
+
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-phone > img {margin: 0 auto;width: 70%;}
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-logo > img {width: 100%;}
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-download > a {display: block;width: 50%;margin: 0 auto;}
+.dbh-body > div.dbh-content > div.dbh-content-download > div.dbh-download > a > img {width: 100%;}
+
+/* dbh-content-tel */
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-qrcode-word,
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-qrcode,
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-tel-word,
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-tel {position: absolute;}
+
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-qrcode-word {top: 10px;left: 0;width: 40%;font-size: 36px;font-weight: 500;padding: 3px 0;text-align: center;color: rgb(8,1,3);cursor: default;}
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-qrcode {top: 15px;right: 0;width: 52%;}
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-qrcode > img {width: 114px;height: 114px;}
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-tel-word {top: 10px;right: 70px; width: 33%;font-size: 25px;color: #fff;cursor: default;}
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-tel {top: 55px;right: 70px; width: 33%;height: 68px;background: url("../image/tel-bg.png") center no-repeat;background-size: cover;-moz-opacity: 0.6;border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;}
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-tel input {position: absolute;top: 12px;left: 30px;width: 240px;font-size: 37px;background: transparent;border: none;outline: none;}
+.dbh-body > div.dbh-content > div.dbh-content-tel > div.dbh-tel a {position: absolute;top: 10px;right: 10px;display: inline-block;width: 80px;height: 50px;background-color: rgb(233,72,54);color: #fff;font-size: 25px;line-height:50px;font-weight: 400;text-align: center;}
+
+/* dbh-info */
+.dbh-footer > div.dbh-info {padding: 25px 0 25px 0;color: rgb(127,141,145);}
+.dbh-footer > div.dbh-info > div.dbh-partner-link > span{color: rgb(187,195,200);}
+.dbh-footer > div.dbh-info > div.dbh-copyright {text-align: center;}

@@ -1,0 +1,33 @@
+.protocol_common{
+    font-size: 1.6em;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.protocol_indent{
+    text-indent: 2em;
+}
+
+.importent_words{
+    font-weight: bolder;
+    text-decoration: underline;
+    margin:0;
+}
+
+.title_one{
+    font-size: 2em;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+.protocol_common ul{
+    padding-left: 30px;
+}
+
+.protocol_common ul li{
+    list-style-type: none;
+}
+
+.padding_zero{
+    padding: 0 !important;
+}

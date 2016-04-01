@@ -1,0 +1,77 @@
+<?php
+/**
+* FEROS™ PHP template engine
+* @author feros<admin@feros.com.cn>
+* @copyright ©2015 feros.com.cn
+* @link http://www.feros.com.cn
+* @version 2.0.2
+*/
+?><!-- PAGE CONTENT ENDS --></div><!-- /.col --></div><!-- /.row --></div><!-- /.page-content --></div><!-- /.main-content --><div class="ace-settings-container" id="ace-settings-container"><div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn"><i class="icon-cog bigger-150"></i></div><div class="ace-settings-box" id="ace-settings-box"><div><div class="pull-left"><select id="skin-colorpicker" class="hide"><option data-skin="default" value="#438EB9">#438EB9</option><option data-skin="skin-1" value="#222A2D">#222A2D</option><option data-skin="skin-2" value="#C6487E">#C6487E</option><option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option></select></div><span>&nbsp; 选择皮肤</span></div><div><input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" /><label class="lbl" for="ace-settings-navbar"> 固定导航条</label></div><div><input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" /><label class="lbl" for="ace-settings-sidebar"> 固定滑动条</label></div><div><input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" /><label class="lbl" for="ace-settings-breadcrumbs">固定面包屑</label></div><div><input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" /><label class="lbl" for="ace-settings-rtl">切换到左边</label></div><div><input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" /><label class="lbl" for="ace-settings-add-container">
+								切换窄屏
+								<b></b></label></div></div></div><!-- /#ace-settings-container --></div><!-- /.main-container-inner --><a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"><i class="icon-double-angle-up icon-only bigger-110"></i></a></div><!-- /.main-container --><?php echo $this->fetch('block/loading');?><!-- basic scripts --><!--[if !IE]> --><script src="/ace/assets/js/jquery.min.js"></script><!-- <![endif]--><!--[if IE]><script src="http://ajax.useso.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><![endif]--><!--[if !IE]> --><script type="text/javascript">
+			window.jQuery || document.write("<script src='/ace/assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
+		</script><!-- <![endif]--><!--[if IE]><script type="text/javascript">
+ window.jQuery || document.write("<script src='/ace/assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+</script><![endif]--><script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='/ace/assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+		</script><script src="/ace/assets/js/bootstrap.min.js"></script><script src="/ace/assets/js/typeahead-bs2.min.js"></script><!-- ace scripts --><script src="/ace/assets/js/ace-elements.min.js"></script><!-- <script src="/ace/assets/js/ace.min.js"></script> --><script src="/ace/assets/js/ace.js"></script><!-- inline scripts related to this page --><!--把main-content里面的a链接的href加上mid这个参数 --><script>
+			var reg = new RegExp("(^|&)"+ 'mid' +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+			if (r!=null){
+				$('.main-content a').each(function(){
+					href = $(this).attr('href');
+					var notis = /^\//;
+					if(notis.test(href)){
+						if(href.indexOf('?')!= -1){
+							$(this).attr('href' , $(this).attr('href')+"&mid="+r[2]);
+						}else{
+							$(this).attr('href' , $(this).attr('href')+"?mid="+r[2]);
+						}
+					}
+					
+				});
+			}
+		
+		</script><!-- inline scripts related to this page --><script type="text/javascript">
+			jQuery(function($) {
+				if($("#datepicker").length>0){
+							$( "#datepicker" ).datepicker({
+								showOtherMonths: true,
+								selectOtherMonths: false,
+								//isRTL:true,
+						
+								
+								/*
+								changeMonth: true,
+								changeYear: true,
+								
+								showButtonPanel: true,
+								beforeShow: function() {
+									//change button colors
+									var datepicker = $(this).datepicker( "widget" );
+									setTimeout(function(){
+										var buttons = datepicker.find('.ui-datepicker-buttonpane')
+										.find('button');
+										buttons.eq(0).addClass('btn btn-xs');
+										buttons.eq(1).addClass('btn btn-xs btn-success');
+										buttons.wrapInner('<span class="bigger-110" />');
+									}, 0);
+								}
+						*/
+							});
+
+							$( "#datepicker_start" ).datepicker({
+								showOtherMonths: true,
+								selectOtherMonths: false,
+							});
+
+							$( "#datepicker_end" ).datepicker({
+								showOtherMonths: true,
+								selectOtherMonths: false,
+							});
+				}
+			
+			
+			});
+					
+		</script></body></html>

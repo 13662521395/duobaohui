@@ -1,0 +1,121 @@
+.c_f{text-align:center;}
+.c_r{text-align:right;}
+.hidden_f{overflow:hidden;}
+.v_hidden{visibility:hidden;}
+.tunder_f{text-decoration:underline;}
+.nowrap_f{white-space:nowrap;}
+.none_f{display:none;}
+.inline_f{display:inline;}
+.block_f{display:block;}
+.i_block_f{display:inline-block;}
+.auto_f{margin-left:auto;margin-right:auto;}
+.left_f{float:left;}
+.right_f{float:right;}
+.pa_f{position:absolute;}
+.pr_f{position:relative;}
+.cursor_f{cursor:pointer;}
+.clear_f{clear:both;overflow:hidden;height:0px;}
+.clearfix_f{*zoom:1;}
+.clearfix_f:after{clear:both;content:".";display:block;visibility:hidden;height:0px;}
+.fb_f{font-weight:bold;}
+.f8_f{font-size:8px;}
+.f12_f{font-size:12px;}
+.f14_f{font-size:14px;}
+.f16_f{font-size:16px;}
+.f18_f{font-size:18px;}
+.f20_f{font-size:20px;}
+.f24_f{font-size:24px;}
+.f30_f{font-size:30px;}
+.l16_f{line-height:16px;}
+.l18_f{line-height:18px;}
+.l20_f{line-height:20px;}
+.l22_f{line-height:22px;}
+.l30_f{line-height:30px;}
+.h16_f{height:16px;}
+.h18_f{height:18px;}
+.h20_f{height:20px;}
+.h22_f{height:22px;}
+.h30_f{height:30px;}
+.h200_f{height:200px;}
+.hw33{width:33px;}
+.hw46{width:46px;}
+.hw62{width:62px;}
+.hw73{width:73px;}
+.hw76{width:76px;}
+.hw120{width:120px;}
+.w200_f{width:200px;}
+.w720_f{width:720px;}
+.w948_f{width:948px;}
+.mt0_f{margin-top:0px;}
+.mt4_f{margin-top:4px;}
+.mt5_f{margin-top:5px;}
+.mt8_f{margin-top:8px;}
+.mt10_f{margin-top:10px;}
+.mt14_f{margin-top:14px;}
+.mt20_f{margin-top:20px;}
+.mt25_f{margin-top:25px;}
+.mt30_f{margin-top:30px;}
+.mt40_f{margin-top:40px;}
+.mt50_f{margin-top:50px;}
+.mt100_f{margin-top:100px;}
+.mr4_f{margin-right:4px;}
+.mr6_f{margin-right:6px;}
+.mr14_f{margin-right:14px;}
+.mb14_f{margin-bottom:14px;}
+.ml4_f{margin-left:l4px;}
+.ml6_f{margin-left:l6px;}
+.ml10_f{margin-left:10px;}
+.ml14_f{margin-left:14px;}
+.ml40_f{margin-left:40px;}
+.ml74_f{margin-left:74px;}
+.mb50_f{margin-bottom:50px;}
+.pr6_f{padding-right:6px;}
+.pl6_f{padding-left:6px;}
+.red_f{color:#ed5565;}
+.red_f a{color:#999999;text-decoration:none;}
+.red_f a:hover{color:#999;text-decoration:underline;}
+.white_f{color:#fff;text-decoration:none;}
+.white_f:hover{color:#fff;}
+.white_f a{color:#fff;text-decoration:none;}
+.white_f a:hover{color:#fff;}
+.white_f a:hover{color:#fff;}
+.white_f a:hover:hover{color:#fff;}
+.gray_f{color:#999;text-decoration:none;}
+.gray_f a{color:#999;text-decoration:none;}
+.gray_f a:hover{color:#f69;}
+.bgred_f{background-color:#f69;}
+.bggay_f{background-color:#CCC;}
+.bgpink_f{background-color:#FFDCE7;}
+.bgwhite_f{background-color:#fff;}
+.box_shadow{box-shadow:0 1px 3px rgba(34, 25, 25, 0.2);-webkit-box-shadow:rgba(34, 25, 25, 0.2) 0px 1px 3px;-webkit-border-radius:4px;border-radius:4px;border:1px solid #ddd\9;}
+
+
+
+/*.user_avatar_10{width:10px;height:10px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;} */
+.user_avatar_72{width:62px;height:62px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_avatar_42{width:42px;height:42px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_avatar_60{width:50px;height:50px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_avatar_70{width:60px;height:60px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_avatar_90{width:80px;height:80px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_avatar_160{width:150px;height:150px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_avatar_120{width:110px;height:110px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_avatar_110{width:100px;height:100px;overflow:hidden;border-radius:50%;border:solid 5px #cccccc;}
+.user_ident{width:52px;padding-left:20px;height:20px;background:url(../images/bg/daren_bg.gif) no-repeat;margin-top:7px;color:#fff;line-height:20px;display:block;float:left;}
+.user_avatar_42 img{width:42px;height:42px;}
+.user_avatar_72 img{width:65px;height:65px;}
+.user_avatar_60 img{width:50px;height:50px;}
+.user_avatar_90 img{width:80px;height:80px;}
+.user_avatar_110 img{width:100px;height:100px;}
+.user_avatar_120 img{width:110px;height:110px;}
+.user_avatar_160 img{width:150px;height:150px;}
+
+/*
+ *弹窗浮层
+ * */
+.maskLayer{top:0;left:0;background:#000;position:absolute;z-index:805;}
+.maskLayer{filter:alpha(opacity=60);opacity:0.6;}
+#dialogLayer{position:fixed;_position:absolute;z-index:805;}
+#dialogTitle,.dialogTitle{background:#ccc;font-size:14px;font-weight:bold;padding:0 10px;height:40px;line-height:40px;color:#fff;}
+#dialogContent,.dialogContent{background-color:#fff;width:100%;}
+.close_z{display:block;cursor:pointer;float:right;height:11px;width:11px;}
+

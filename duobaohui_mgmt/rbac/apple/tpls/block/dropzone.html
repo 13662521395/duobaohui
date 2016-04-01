@@ -1,0 +1,70 @@
+<script src="/ace/assets/js/dropzone.min.js"></script>
+
+<script>
+
+		jQuery(function($){
+			try {
+				$('.dropzone .dz-success-mark').hide();
+				$('.dropzone .dz-error-mark').hide();
+				$(".dropzone").dropzone({
+					url: "/main/upload",
+					maxFiles: 1,
+					maxFilesize:0.5,
+					acceptedFiles: "image/*",
+					uploadMultiple: false,
+					addRemoveLinks:true,
+					dictDefaultMessage :
+								'<span class="bigger-150 bolder"><i class="upload-icon icon-cloud-upload blue icon-3x"></i>',
+
+					dictResponseError: 'Error while uploading file!',
+					dictCancelUpload: '&ngsp;取 消&ngsp;',
+					
+					//change the previewTemplate to use Bootstrap progress bars
+					previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n  <div class=\"dz-details\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n    <div class=\"dz-size\" data-dz-size></div>\n    <img data-dz-thumbnail />\n  </div>\n  <div class=\"progress progress-small progress-striped active\"><div class=\"progress-bar progress-bar-success\" data-dz-uploadprogress></div></div>\n  <div class=\"dz-success-mark\"><span></span></div>\n  <div class=\"dz-error-mark\"><span></span></div>\n  <div class=\"dz-error-message\"><span data-dz-errormessage></span></div>\n</div>",
+					dictMaxFilesExceeded: "每次只能上传一张图",
+					init: function() {
+						var dz = $(this.element);
+
+						// 显示已有图片
+						if(dz.attr('img')!=undefined){
+							var tmp = new Array();//临时变量，保存分割字符串 
+							tmp = dz.attr('img').split("/");//按照"/"分割 
+							var mockFile = { name: tmp[tmp.length-1], size: 0 };
+							this.emit("addedfile", mockFile);
+							this.emit("thumbnail", mockFile, dz.attr('img'));
+						}
+
+						// 文件名
+						var filename = dz.attr('filename');
+						dz.append('<input type="hidden" name="'+filename+'" value="" />');
+						var file_input = dz.find('input[name='+filename+']');
+
+						this.on("success", function(file,res) {
+							res = $.parseJSON(res);
+							if(res.status){
+								dz.find('.dz-success-mark').show(200);
+								dz.find('.dz-error-mark').hide(200);
+								file_input.val(res.message);
+								
+							}else{
+								dz.find('.dz-success-mark').hide(200);
+								dz.find('.dz-error-mark').show(200);
+								dz.find('.dz-error-message span').text(res.message);
+							}
+							dz.find('.dz-message').hide(200);
+						});
+						this.on("removedfile", function(file) {
+							file_input.val('');
+							dz.find('.dz-error-message span').text('');
+							dz.find('.dz-message').show(200);
+						});
+					}
+
+				});
+			} catch(e) {
+			  alert('Dropzone 启动失败 !');
+			}
+			
+		});
+
+</script>

@@ -1,0 +1,145 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+
+html{
+    font-size: 16px !important;
+}
+
+body{
+    font-size: 62.5%;
+    background-color: #efefef;
+}
+
+header{
+    margin-top: 25px;
+}
+
+header img{
+    width: 102.5px !important;
+    height: 124px !important;
+}
+
+.alignCenter{
+    clear: both;
+    display: block;
+    margin:auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 25px;
+}
+
+.title_sub{
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+.row{
+    margin: 0 !important;
+}
+
+.days{
+    margin: 20px auto 0 auto;
+    width: 95%;
+}
+.days2{
+    margin: 0px auto 0 auto;
+    width: 95%;
+}
+
+.day_one{
+    width: 20%;
+    padding: 0;
+}
+
+.day_desc{
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 1.4em;
+}
+
+.noSignColor{
+    background-color: #afafaf;
+}
+
+.signColor{
+    background-color: #ff5a5a;
+}
+
+.rules{
+    padding: 20px 2.5%;
+    background-color: #dddddd;
+    margin-top: 20px;
+    line-height: 2;
+    color: #666666;
+}
+
+.rules_title{
+    font-size: 2em;
+}
+
+ol li{
+    font-size: 1.5em;
+}
+
+.closeRedPacket{
+    background: url("../image/sign/第五天红包未签_720.png") no-repeat;
+    background-size: 30px 28px;
+    background-position: center;
+    background-color: #afafaf;
+}
+
+.openRedPacket{
+    background: url("../image/sign/签到第五天红包_720.png") no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+    background-color: #afafaf;
+}
+
+.bigRedPacket{
+    position: absolute;
+    background-size: 66px 66px;
+    background-position: center;
+    width: 100%;
+    height: 66px;
+    border-radius: 33px;
+    bottom: -8px;
+    left: 0px;
+    z-index: 99;
+    background-color: #efefef;
+}
+
+@media screen and (max-width: 320px){
+
+    .bigRedPacket{
+        position: absolute;
+        background-size: 60px 60px;
+        background-position: center;
+        width: 100%;
+        height: 60px;
+        border-radius: 30px;
+        bottom: -5px;
+        left: 0px;
+        z-index: 99;
+        background-color: #efefef;
+    }
+
+}

@@ -1,0 +1,145 @@
+<style>
+	.main-container:after , .sidebar:before{
+		position:static;
+	}
+
+</style>
+
+<script type="text/html" id="js_product" >
+		<div class="main-container" id="main-container" style="position:static">
+			<div class="main-container-inner">
+
+				<div class="sidebar" id="sidebar">
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="/">
+								<i class="icon-dashboard"></i>
+								<span class="menu-text"> 选择分类 </span>
+							</a>
+						</li>
+						
+						<% $.each(obj.category , function(idx , value){%>
+						<li>
+							<a class="dropdown-toggle" href="#">
+								<i class="icon-file-alt"></i>
+								<span class="menu-text"><%=value.name%></span>
+							</a>
+							<!--<ul class="submenu">
+								<li>
+									<a class="dropdown-toggle" href="#">
+										<i class="icon-text-width"></i>
+										<span class="menu-text">脑白金</span>
+									</a>
+								</li>
+							</ul>-->
+						</li>
+						<% });%>
+						
+
+					</ul><!-- /.nav-list -->
+
+				</div>
+
+				<div class="main-content" >
+					<div class="breadcrumbs" id="breadcrumbs">
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content" style="height:300px;overflow:auto;">
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<div class="row">
+									<div class="col-xs-12">
+										<h3 class="header smaller lighter blue">商品管理</h3>
+										<div class="table-header">
+											商品列表
+										</div>
+
+										<div class="table-responsive">
+											<table id="sample-table-2" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th width="5%" class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th width="5%">ID</th>
+														<th width="8%">数量</th>
+														<th width="20%">标题</th>
+														<!--<th width="10%">描述 </th>-->
+														<th width="10%">分类</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+													<% $.each(obj.product , function(idx , value){ %>
+													
+													<tr>
+														<td class="center td-checkbox">
+															<label>
+																<input type="checkbox" product_id=<%=value.product_id%> product_num=0 class="ace table-checkbox table-checkbox-<%=value.product_id%>" value="<%=value.product_id%>"/>
+																<span class="lbl"></span>
+															</label>
+														</td>
+														<td class="product-id"><%=value.product_id%></td>
+														<td class="table-td-num">
+															<div class="ace-spinner touch-spinner" style="width:100px">
+																<div class="input-group">
+																	<div class="spinner-buttons input-group-btn">
+																		<button product_id="<%=value.product_id%>" class="btn-dec btn spinner-down btn-xs btn-danger" type="button">
+																			<i class="icon-minus smaller-75"></i>
+																		</button>
+																	</div>
+																	<input id="spinner3" class="product-num-<%=value.product_id%> input-mini spinner-input form-control" type="text" maxlength="5" />
+																	<div class="spinner-buttons input-group-btn">
+																		<button product_id="<%=value.product_id%>" class="btn-add btn spinner-up btn-xs btn-success" type="button">
+																			<i class="icon-plus smaller-75"></i>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<!--
+															<button class="btn-dec btn btn-xs btn-success" style="margin-right:2px;"><i>-</i></button>
+															<input style="width:40px" type="text" class="product-num" value="" />
+															<button class="btn-add btn btn-xs btn-success" style="margin-left:2px;"><i>+</i></button>
+															-->
+														</td>
+														<td><%=value.name%></td>
+														<!--<td><%=value.remark%></td>-->
+														<td><%=value.categoryInfo.name%></td>
+													</tr>
+													
+													<% }); %>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+				<input type="hidden" value="" class="sub-id" />
+				<input type="hidden" value="" class="sub-num" />
+				<div style="width:100%;height:auto;padding:10px 0 10px 75%;background-color:#ccc;">
+					<button class="btn btn-primary btn-confirm" style="margin-right:20px;">
+						确定
+					</button>
+					<button class="btn btn-cancel" style="">
+						取消
+					</button>
+				</div>
+</script>

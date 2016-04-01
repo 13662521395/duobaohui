@@ -1,0 +1,17 @@
+<?php
+namespace Gate\Config\Dev;
+
+class MySQL extends \Phplib\Config {
+
+	protected function __construct() {
+		$this->sh_duobaohui = $this->sql_conf();
+	}
+
+	private function sql_conf() {
+		$config = array();
+		$config['MASTER']		= array('HOST' => '192.168.1.226','PORT' => '3306', 'USER' => 'shihe', 'PASS' => 'shinc123456', 'DB' => 'sh_duobaohui');
+		$config['SLAVES'][]		= array('HOST' => '192.168.1.226','PORT' => '3306', 'USER' => 'shihe', 'PASS' => 'shinc123456', 'DB' => 'sh_duobaohui');
+		return $config;
+	}
+
+}
